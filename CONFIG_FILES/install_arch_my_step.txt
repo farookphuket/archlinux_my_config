@@ -1,0 +1,122 @@
+
+
+make boot from usb 
+after boot will  be drop you into the root shell 
+
+# type iwctl hit Enter we have to get the internet 
+iwctl 
+
+
+# list the device 
+device list 
+
+# get network
+station wlan0 get-networks 
+
+# connect 
+station wlan0 connect netDtac 
+
+# enter the wifi  password you'll connect to the internet now 
+
+
+# list your disk 
+fdisk -l 
+
+# make a patition (in my laptop the HDD is nvme0n1 but in the video I make using Virtualbox 
+# so the HDD is sda if you do this with Qemu will be vda instead)
+fdisk /dev/sda 
+
+# select patition table dos type 
+
+# make boot partition 550M press b to give a boot flag 
+# select type 'EFI' this is very important!
+
+# make install partition (if your disk has more space you go ahead and make more patition )
+# the rest of the space in my case I only have 29GB so I just hit Enter 
+# to create new partition.
+
+# write new partition by select write option then select quit out from cfdisk 
+
+# format the partition 
+mkfs.fat -F32 /dev/sda1 
+mkfs.ext4 /dev/sda2 
+
+
+
+#mount partition
+
+
+mount /dev/sda2 /mnt 
+mkdir /mnt/boot
+mount /dev/sda1 /mnt/boot
+
+
+# pacstrap 
+pacstrap /mnt base base-devel linux linux-firmware vim 
+
+
+
+------- START HERE
+# gen fstab
+
+genfstab -U /mnt >> /mnt/etc/fstab
+
+
+# chroot
+arch-chroot /mnt /bin/bash 
+
+
+# install the package
+pacman -S networkmanager grub efibootmgr wireless_tools wpa_supplicant dialog
+
+# start network manager
+systemctl enable NetworkManager
+
+
+# grub-install 
+
+grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub
+
+
+# gen grub config file 
+
+grub-mkconfig -o /boot/grub/grub.cfg
+
+
+# set passwd
+
+passwd 
+
+
+# gen locale
+
+vim /etc/locale.gen 
+locale-gen 
+
+vim /etc/locale.conf 
+
+LANG=en_US.UTF-8 
+
+
+vim /etc/hostname 
+
+
+#set time zone
+
+ln -sf /usr/share/zoneinfo/Asia/Bangkok /etc/localtime 
+
+
+exit 
+
+umount -R /mnt 
+
+
+reboot
+
+
+
+# in the laptop you will be not connnect to any network now 
+# type nmtui hit enter press doown aero key to activate a network then select your wifi network hit enter 
+# type in your wifi password hit Enter  
+# you're now connect to the internet try to close this window by press tab to the back hit enter 
+# then select quit hit enter you're will be back to the root shell again.
