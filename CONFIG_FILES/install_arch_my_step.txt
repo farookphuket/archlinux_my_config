@@ -67,7 +67,7 @@ arch-chroot /mnt /bin/bash
 
 
 # install the package
-pacman -S networkmanager grub efibootmgr wireless_tools wpa_supplicant dialog
+pacman -S networkmanager grub efibootmgr wireless_tools wpa_supplicant dialog 
 
 # start network manager
 systemctl enable NetworkManager
@@ -106,6 +106,19 @@ vim /etc/hostname
 ln -sf /usr/share/zoneinfo/Asia/Bangkok /etc/localtime 
 
 
+# add the regular user 
+useradd -mg wheel farook
+
+# set the password for farook
+passwd farook
+
+# edit the sudoers file 
+vim /etc/sudoers 
+
+# un comment %wheel and add 
+# Defaults !tty_tickets 
+
+
 exit 
 
 umount -R /mnt 
@@ -120,3 +133,100 @@ reboot
 # type in your wifi password hit Enter  
 # you're now connect to the internet try to close this window by press tab to the back hit enter 
 # then select quit hit enter you're will be back to the root shell again.
+
+
+
+# setup the gui to using arch linux 
+
+useradd -mg wheel farook
+passwd farook 
+
+
+# edit sudoer file 
+
+vim /etc/sudoers 
+
+
+# find the line with wheel 
+
+# un comment the line %wheel 
+# then type 
+Defaults !tty_tickets
+
+# save the file by press :wq! 
+
+
+# install xorg for the next step to setup gui
+pacman -S xorg git firefox lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings lxsession polkit-gnome nuatilus git alacritty rxvt-unicode
+
+
+
+# enable ligthdm 
+systemctl enable lightdm
+
+
+# create xsessions dir 
+mkdir /usr/share/xsessions 
+
+# create dwm.desktop file 
+touch /usr/share/xsessions/dwm.desktop 
+
+# the content into dwm.desktop 
+[Desktop Entry]
+Encoding=UTF-8
+Name=Dwm
+Exec=dwm
+Iconf=dwm
+Comment=Dwm window manager
+Type=XSession
+
+
+# exit from root shell
+exit 
+
+
+# login as user farook
+
+# enable aur we need this
+
+git clone https://aur.archlinux.org/yay-git.git ~/yay 
+cd ~/yay 
+makepkg -si 
+
+
+# install nm-applet 
+yay -S network-manager-applet
+
+# make dir in Home
+mkdir Desktop Videos Pictures Downloads Documents .dwm
+
+# ls -la to check if we have .config folder if not let create one 
+
+mkdir ~/.config 
+
+# clone dwm dmenu st to ~/.config folder
+git clone https://git.suckless.org/dwm ~/.config/dwm
+git clone https://git.suckless.org/dmenu ~/.config/dmenu
+git clone https://git.suckless.org/st ~/.config/st
+
+
+
+
+# setup dwm 
+cd ~/.config/dwm 
+sudo make clean install
+
+# setup dmenu
+cd ~/.config/dmenu
+sudo make clean install 
+
+# setup st
+cd ~/.config/st 
+sudo make clean install 
+
+
+
+# now you're good to go login with GUI
+reboot 
+
+# you should see the login screen
