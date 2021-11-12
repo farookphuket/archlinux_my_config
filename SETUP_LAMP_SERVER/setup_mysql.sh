@@ -2,7 +2,7 @@
 
 
 # give the full path dir 
-FILES_DIR=~/arcolinux_my_config/SETUP_LAMP_SERVER/files_inc
+FILES_DIR=~/archlinux_my_config/SETUP_LAMP_SERVER/files_inc
 
 sudo pacman -S mysql --needed --noconfirm
 

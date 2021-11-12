@@ -12,7 +12,7 @@ USER_NAME=$USER
 mkdir -p ~/Documents/Old_config
 BACKUP_DIR=~/Documents/Old_config
 BACKUP_PATH=$BACKUP_DIR
-target_dir=~/arcolinux_my_config/SETUP_LAMP_SERVER/files_inc
+target_dir=~/archlinux_my_config/SETUP_LAMP_SERVER/files_inc
 
 
 
