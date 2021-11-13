@@ -1,0 +1,27 @@
+
+
+
+super + Return
+	alacritty --working-directory ~/
+
+super + shift + Return
+    urxvt -e "ranger" 
+
+super + F2
+	firefox
+
+
+super + d
+	rofi -show drun -theme sidebar
+
+
+
+
+super + shift + b
+	blueman-manager
+
+super + m 
+    urxvt -e "cmus" ; sleep 5s ; cmus-remote -C "update-cache -f"
+
+super + x
+    $(echo "shutdown now \nreboot" | dmenu -l 20)

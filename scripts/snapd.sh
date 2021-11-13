@@ -1,6 +1,13 @@
 #!/bin/bash 
 
 
+ex_snp=/usr/share/zsh/site-functions/_snap
+if [ -f "$ex_snp" ] ;
+then
+    sudo rm -rf $ex_snp 
+    echo "deleted file"
+fi
+
 pushd ~/ 
 git clone https://aur.archlinux.org/snapd.git 
 cd snapd 

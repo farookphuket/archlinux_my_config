@@ -30,91 +30,11 @@ welcome || error "User choose to exit."
 
 
 
-sudo pacman -Syyu
+sudo pacman -Syyu --disable-download-timeout
 
-# =========  
-sudo pacman -S --needed --noconfirm nodejs npm composer gnome-characters gnome-calculator
-
-# terminal 
-sudo pacman -S --needed --noconfirm gnome-terminal konsole 
 
 # ============= setup yay 
 sh $run_script_dir/yay.sh
-
-
-
-# =========== code editor ,ranger file manager,rsync file compare
-sudo pacman -S  --needed  gvim atom code neovim ranger rsync
-
-# ========== screen capture video editor
-sudo pacman -S --needed --noconfirm spectacle obs-studio kdenlive soundconverter
-
-
-# subtitle editor 
-sudo pacman -S --needed --noconfirm aegisub 
-
-# mp3 tag editor 
-yay -S puddletag-git
-
-# google-chrome
-pamac build google-chrome 
-
-# brave browser
-yay -S brave-bin 
-
-# opensuse image writer
-yay -S imagewriter 
-
-
-# ============= cmus cannot be install if it found in zsh/site-functions ======
-# remove _cmus* 
-sudo rm -rf /usr/share/zsh/site-functions/_cmus*
-
-# ============= youtube-dl cannot be install if it found in zsh/site-functions ======
-# remove _youtube-dl 
-sudo rm -rf /usr/share/zsh/site-functions/_youtube-dl
-
-# gthumb image tools, cmus play song,youtube-dl download video from youtube
-sudo pacman -S --needed --noconfirm gthumb cmus youtube-dl
-
-# sticky note
-sudo pacman -S --needed --noconfirm xpad knotes
-
-#
-sleep 5s
-
-urxvt -e cmus &
-
-# ocenaudio sound editor 
-yay -S ocenaudio 
-
-
-# network-manager-applet
-yay -S network-manager-applet 
-
-# pamac-tray 
-yay -S pamac-tray-icon-plasma
-
-# install vlc
-pamac install vlc
-
-
-# sound player 
-sudo pacman -S  --needed --noconfirm audacious amarok clementine
-
-
-
-# install virt-manager 
-sh $run_script_dir/virt-manager.sh
-
-
-# install virtualbox 
-sh $run_script_dir/virtualbox.sh
-
-
-# install libreoffice 
-sh $run_script_dir/libre_office.sh
-
 
 
 # ========================= Shutter ===========================================
@@ -124,8 +44,8 @@ sh $run_script_dir/libre_office.sh
 # setup snap  
 sh $run_script_dir/snapd.sh 
 
-# then install shutter
-sh $run_script_dir/shutter.sh
+
+sh $run_script_dir/call_script.sh
 
 # =============================================================================
 # ============== install the need program END =================================
@@ -153,33 +73,10 @@ sudo pacman -Syyu --disable-download-timeout
 
 
 
-# ====== copy dwm config file START ===========================================
-old_dwm_config_dir=~/.config/dwm/
-if [[ -d $old_dwm_config_dir ]]; then
-    mv ~/.config/dwm ~/.config/dwm.old/ 
-fi
-
-
-old_dmenu_config_dir=~/.config/dmenu/
-if [[ -d $old_dmenu_config_dir ]]; then
-    mv ~/.config/dmenu ~/.config/dmenu.old/ 
-fi
-
-
-old_st_config_dir=~/.config/st/
-if [[ -d $old_st_config_dir ]]; then
-    mv ~/.config/st ~/.config/st.old/ 
-fi
-
-# copy the dwm,dmenu,st config 
-cp -r $tar_dir/dwm $config_des_dir
-cp -r $tar_dir/dmenu $config_des_dir
-cp -r $tar_dir/st $config_des_dir
 
 
 
 
-# ====== copy dwm config file END =============================================
 
 
 # ====== copy zsh config

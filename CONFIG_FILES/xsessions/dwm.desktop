@@ -1,0 +1,7 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Dwm
+Type=XSession
+Exec=dwm
+Icon=dwm
+Comment=Hello Dwm
