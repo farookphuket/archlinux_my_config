@@ -12,7 +12,7 @@ sudo pacman -S --needed virt-manager qemu vde2 ebtables dnsmasq bridge-utils ope
 
 # fix network default not define 14 Nov 2021 from :
 # https://blog.programster.org/kvm-missing-default-network
-sudo cp -r $CONFIG_FILE_DIR/networks /usr/share/libvirt/ 
+sudo cp -r $CONFIG_FILE_DIR/networks/ /usr/share/libvirt/ 
 
 sudo virsh net-define /usr/share/libvirt/networks/default.xml
 
@@ -37,5 +37,5 @@ msg_body="your virt-manager has been install successfully but some service maybe
 please restart your machine in order to use this program"
 
 
-dialog --title $msg_title --backtitle $msg_back --msgbox $msg_body 14 65
+dialog --title "$msg_title" --backtitle "$msg_back" --msgbox "$msg_body" 14 65
     
