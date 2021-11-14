@@ -1,0 +1,24 @@
+
+
+
+super + Return 
+	alacritty --working-directory ~/
+
+super + d
+	rofi -show drun -theme sidebar
+
+
+super + F2
+	firefox
+
+
+super + shift + b
+	blueman-manager 
+
+# open rager file manager
+super + shift + Return
+    urxvt -e "ranger"
+
+
+super + x
+    $(echo "lxsession-logout \nreboot \nshutdown now" | dmenu -l 20)
