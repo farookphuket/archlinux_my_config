@@ -9,7 +9,7 @@ then
 sudo rm -rf /usr/share/zsh/site-functions/_cmus 
 fi
 
-sudo pacman -S --needed --noconfirm cmus audacious
+sudo pacman -S --needed --noconfirm cmus 
 
 
 
