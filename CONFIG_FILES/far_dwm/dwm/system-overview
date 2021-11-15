@@ -62,7 +62,7 @@ conky.config = {
 
 	extra_newline = false,						-- extra newline at the end - for asesome's wiboxes
 	format_human_readable = true,				-- KiB, MiB rather then number of bytes
-	font = 'Noto Mono:size=9:regular',  			-- font for complete conky unless in code defined
+	font = 'SauceCodePro Nerd Font:size=11:regular',  			-- font for complete conky unless in code defined
 	max_text_width = 0,							-- 0 will make sure line does not get broken if width too smal
 	max_user_text = 16384,						-- max text in conky default 16384
 	override_utf8_locale = true,				-- force UTF8 requires xft
@@ -110,11 +110,13 @@ conky.config = {
 conky.text = [[
 
 
-${color1}${font Bitstream Vera Sans:size=22}${time %l:%M:%S %P}${color}
-${voffset 8}$color2${font Bitstream Vera Sans:size=16}${time %A}$font\
-${voffset -8}$alignr$color${font Bitstream Vera Sans:size=22}${time %e}$font
-$color${voffset -30}$color${font Bitstream Vera Sans:size=18}${time %b}$font\
-${voffset -3} $color${font Bitstream Vera Sans:size=20}${time %Y}$font$color2$hr
+#${color1}${font Bitstream Vera Sans:size=30}${time %l:%M:%S %P}${color}
+${color1}${font SauceCodePro Nerd Font:size=30}${time %l:%M:%S %P}${color}
+${voffset 8}$color2${font Bitstream Vera Sans:size=28}${time %A}$font\
+${voffset -8}$alignr$color${font Bitstream Vera Sans:size=32}${time %e}$font
+$color${voffset 8}$color2${font Bitstream Vera Sans:size=28}${time %b}$font\
+#${voffset -8} $color${font Bitstream Vera Sans:size=30}${time %Y}$font$color2$hr
+${voffset -8}$alignr$color${font Bitstream Vera Sans:size=30}${time %Y}$font
 
 
 ${color1}${hr}${color}
@@ -142,7 +144,6 @@ ${else}${cpu cpu0}${endif}${endif}%${alignr}${freq_g}${color}
 
 ${color1}${alignc}S H O R T C U T    K E Y S${color}
 ${color1}${hr}${color}
-${color1}[S]+[Shift]+D${alignr}${color2}Main Menu${color}
 ${color1}[S]+d${alignr}${color2}Show Menu${color}
 ${color1}[S]+F1${alignr}${color2}Brave Browser${color}
 ${color1}[S]+F2${alignr}${color2}Firefox Browser${color}
@@ -152,16 +153,17 @@ ${color1}[S]+[Shift]+Enter${alignr}${color2}Ranger File Manager${color}
 ${color1}[S]+m${alignr}${color2}Open Cmus Music Player${color}
 ${color1}[S]+F6${alignr}${color2}Media Player${color}
 ${color1}[S]+[Space]${alignr}${color2}Change Layout${color}
-${color1}[S]+h${alignr}${color2}Task Manager${color}
+${color1}[S]+Shift+h${alignr}${color2}Task Manager${color}
 ${color1}[S]+v${alignr}${color2}Volume Control${color}
 ${color1}[S]+[Shift]+b${alignr}${color2}Bluetooth${color}
 ${color1}[PrtSc]${alignr}${color2}Screenshot${color}
-${color1}[S]+[Shift]+R${alignr}${color2}Restart${color}
+${color1}[S]+[Shift]+R${alignr}${color2}DWM Restart${color}
 ${color1}${hr}${color}
-${color1}[S]+[Shift]+Q${alignr}${color2}Stop application${color}
-${color1}[S]+x${alignr}${color2}Exit${color}
-${color1}[S]+x+r${alignr}${color2}Restart${color}
-${color1}[S]+x+s${alignr}${color2}Shutdown${color}
-${color1}${hr}${color}
-${color1}${execi 6000 lsb_release -d | grep 'Descr'|awk {'print $2 " " $3" " $4" " $5'}}${alignr}${execi 6000 lsb_release -a | grep 'Release'|awk {'print $2""$3""$4""$5'}}${color}
+${color1}[S]+[Shift]+Q${alignr}${color2}Exit${color}
+${color1}[S]+x+Enter${alignr}${color2}Restart${color}
+${color1}[S]+x+Down${alignr}${color2}Shutdown${color}
+
+#${color1}${hr}${color}
+#${color1}${execi 6000 lsb_release -d | grep 'Descr'|awk {'print $2 " " $3" " $4" " $5'}}${alignr}${execi 6000 lsb_release -a | grep 'Release'|awk {'print $2""$3""$4""$5'}}${color}
+
 ]];

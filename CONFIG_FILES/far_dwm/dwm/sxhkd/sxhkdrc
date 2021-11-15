@@ -7,9 +7,23 @@ super + Return
 super + shift + Return
     urxvt -e "ranger" 
 
+super + F1
+    brave
+
 super + F2
 	firefox
 
+super + F3
+    chromium
+
+super + F4
+    google-chrome-stable
+
+super + F6 
+    vlc
+
+super + shift + h
+    urxvt -e htop
 
 super + d
 	rofi -show drun -theme sidebar
@@ -24,7 +38,10 @@ super + m
     urxvt -e "cmus" ; sleep 5s ; cmus-remote -C "update-cache -f"
 
 super + x
-    urxvt -e sh ~/config/dwm/exit.sh
+    urxvt -e sh ~/.config/dwm/exit.sh 
 
-Print
+super + v
+   pavucontrol 
+
+Print 
     spectacle
