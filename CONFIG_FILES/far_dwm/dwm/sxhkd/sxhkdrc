@@ -24,4 +24,7 @@ super + m
     urxvt -e "cmus" ; sleep 5s ; cmus-remote -C "update-cache -f"
 
 super + x
-    $(echo "shutdown now \nreboot" | dmenu -l 20)
+    urxvt -e sh ~/config/dwm/exit.sh
+
+Print
+    spectacle

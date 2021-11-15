@@ -21,4 +21,4 @@ super + shift + Return
 
 
 super + x
-    $(echo "lxsession-logout \nreboot \nshutdown now" | dmenu -l 20)
+    urxvt -e sh ~/config/dwm/exit.sh

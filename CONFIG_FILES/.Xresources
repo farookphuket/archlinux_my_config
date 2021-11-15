@@ -13,7 +13,7 @@ URxvt.iso14755:         false
 URxvt.iso14755_52:      false
 URxvt.meta8:            false
 URxvt.metaSendsEscape:  true
-URxvt.iconFile:  		/usr/share/icons/Sardi-Mono/scalable/apps/terminal.svg
+!URxvt.iconFile:  		/usr/share/icons/Sardi-Mono/scalable/apps/terminal.svg
 URxvt.urlLauncher:      firefox
 URxvt.underlineURLs:    true
 URxvt.urlButton:        1
@@ -92,12 +92,20 @@ URxvt.background:   [80]#222222
 !!! copy/paste colorcodes in
 
 ! fonts
-URxvt.letterSpace: 	    		-1
-URxvt.font:                 	xft:Monospace:regular:size=11
-URxvt.imFont:               	xft:Monospace:regular:size=11
-URxvt.italicFont:           	xft:Monospace:italic:size=11
-URxvt.boldFont:             	xft:Monospace:bold:size=11
-URxvt.boldItalicFont:     		xft:Monospace:regular:size=11
+!URxvt.letterSpace: 	    		-1
+!URxvt.font:                 	xft:Monospace:regular:size=11
+!URxvt.imFont:               	xft:Monospace:regular:size=11
+!URxvt.italicFont:           	xft:Monospace:italic:size=11
+!URxvt.boldFont:             	xft:Monospace:bold:size=11
+!URxvt.boldItalicFont:     		xft:Monospace:regular:size=11
+
+
+
+URxvt.font:                 	xft:SauceCodePro NF:regular:size=17
+URxvt.imFont:               	xft:SauceCodePro NF:regular:size=17
+URxvt.italicFont:           	xft:SauceCodePro NF:italic:size=17
+URxvt.boldFont:             	xft:SauceCodePro NF:bold:size=17
+URxvt.boldItalicFont:     		xft:SauceCodePro NF:regular:size=17
 ! run :.!fc-list | grep <font-name>
 
 ! perl extensions
@@ -143,8 +151,8 @@ URxvt.keysym.Control-Shift-V: perl:clipboard:paste
 ! xterm standard arcolinux theme
 ! ------------------------------------------------------------------------------
 
-xterm*faceName: Monospace
-xterm*faceSize: 11
+xterm*faceName: SauceCodePro NF
+xterm*faceSize: 17
 xterm*loginShell: true
 xterm*vt100*geometry: 100x30
 xterm*saveLines: 50000
@@ -169,7 +177,7 @@ xterm*color12: rgb:94/bf/f3
 xterm*color13: rgb:dc/95/e8
 xterm*color14: rgb:93/e0/e3
 xterm*color15: rgb:ff/ff/ff
-xterm*boldMode: false
+xterm*boldMode: true
 xterm*colorBDMode: true
 xterm*colorBD: rgb:ff/ff/ff
 
@@ -186,8 +194,8 @@ UXTerm*termName: xterm-256color
 
 UXTerm*cursorColor:        #c8c8c8
 UXTerm*VT100.geometry:     100x30
-UXTerm*font:               Monospace
-UXTerm*faceSize:		   11
+UXTerm*font:               SauceCodePro NF
+UXTerm*faceSize:		   17
 UXTerm*dynamicColors:      true
 UXTerm*utf8:               2
 UXTerm*eightBitInput:      true
@@ -220,6 +228,6 @@ UXTerm*color13: rgb:dc/95/e8
 UXTerm*color14: rgb:93/e0/e3
 UXTerm*color15: rgb:ff/ff/ff
 
-UXTerm*boldMode: false
+UXTerm*boldMode: true
 UXTerm*colorBDMode: true
 UXTerm*colorBD: rgb:ff/ff/ff
