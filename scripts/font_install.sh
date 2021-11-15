@@ -3,7 +3,10 @@
 
 
 # noto font
-sudo pacman -S --needed --noconfirm noto-fonts noto-fonts-extra
+sudo pacman -S --needed --noconfirm noto-fonts noto-fonts-extra 
+
+# more font 
+yay -S urxvt-resize-font-git ttf-ubuntu-font-family otf-font-awesome ttf-font-awesome ttf-ms-fonts
 
 pushd ~/ 
 
