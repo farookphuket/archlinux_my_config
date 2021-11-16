@@ -2,4 +2,5 @@
 
 
 
-sudo pacman -S --needed --noconfirm tree htop 
+sudo pacman -S --needed --noconfirm tree htop feh nitrogen rsync nautilus krusader 
+

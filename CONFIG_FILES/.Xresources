@@ -101,11 +101,11 @@ URxvt.background:   [80]#222222
 
 
 
-URxvt.font:                 	xft:SauceCodePro NF:regular:size=17
-URxvt.imFont:               	xft:SauceCodePro NF:regular:size=17
-URxvt.italicFont:           	xft:SauceCodePro NF:italic:size=17
-URxvt.boldFont:             	xft:SauceCodePro NF:bold:size=17
-URxvt.boldItalicFont:     		xft:SauceCodePro NF:regular:size=17
+URxvt.font:                 	xft:TH SarabunPSK :regular:size=22
+URxvt.imFont:               	xft:TH SarabunPSK :regular:size=24
+URxvt.italicFont:           	xft:TH SarabunPSK :italic:size=24
+URxvt.boldFont:             	xft:TH SarabunPSK :bold:size=27
+URxvt.boldItalicFont:     		xft:TH SarabunPSK :regular:size=30
 ! run :.!fc-list | grep <font-name>
 
 ! perl extensions
@@ -151,7 +151,8 @@ URxvt.keysym.Control-Shift-V: perl:clipboard:paste
 ! xterm standard arcolinux theme
 ! ------------------------------------------------------------------------------
 
-xterm*faceName: SauceCodePro NF
+!xterm*faceName: SauceCodePro NF
+xterm*faceName: TH SarabunPSK 
 xterm*faceSize: 17
 xterm*loginShell: true
 xterm*vt100*geometry: 100x30
@@ -194,7 +195,8 @@ UXTerm*termName: xterm-256color
 
 UXTerm*cursorColor:        #c8c8c8
 UXTerm*VT100.geometry:     100x30
-UXTerm*font:               SauceCodePro NF
+!UXTerm*font:               SauceCodePro NF
+UXTerm*font:                TH SarabunPSK 
 UXTerm*faceSize:		   17
 UXTerm*dynamicColors:      true
 UXTerm*utf8:               2

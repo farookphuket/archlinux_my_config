@@ -56,14 +56,15 @@ config_des_dir=~/.config
 
 
 # ====== copy vim,neovim,tmux,ranger,powerline config 
-cp -r $tar_dir/vim/.vim ~/ 
+cp -r $tar_dir.vim ~/ 
 cp -r $tar_dir/ranger/ ~/.config/ 
 cp -r $tar_dir/powerline/ ~/.config/
 cp -r $tar_dir/nvim/ ~/.config/
 
-cp $tar_dir/vim/.vimrc ~/
-cp $tar_dir/vim/.bashrc ~/
-cp $tar_dir/vim/.tmux.conf ~/
+cp $tar_dir/.vimrc ~/
+cp $tar_dir/.bashrc ~/
+cp $tar_dir/.tmux.conf ~/
+cp $tar_dir/.Xresources ~/
 
 
 
@@ -90,13 +91,6 @@ sh ~/my_zsh/setup_arco.sh
 
 popd
 
-echo "=========================== operation Complete =========================="
-echo "current dir is $(pwd)"
-echo " logout and log back in to get the new setup effect."
-echo "Thank you for using Farook' s config script."
-echo " please contact 'farookphuket@gmail.com' to report a problem about this script"
-echo ""
-echo "========================================================================="
 
 
 

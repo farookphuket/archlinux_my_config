@@ -17,5 +17,5 @@ sudo pacman -S --needed --noconfirm cmus
 pamac install vlc
 
 
-# sound player 
-sudo pacman -S  --needed --noconfirm audacious amarok clementine
+# sound player , editor
+sudo pacman -S  --needed --noconfirm audacious amarok clementine audacity
