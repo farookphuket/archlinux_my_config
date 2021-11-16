@@ -56,7 +56,7 @@ config_des_dir=~/.config
 
 
 # ====== copy vim,neovim,tmux,ranger,powerline config 
-cp -r $tar_dir.vim ~/ 
+cp -r $tar_dir/.vim ~/ 
 cp -r $tar_dir/ranger/ ~/.config/ 
 cp -r $tar_dir/powerline/ ~/.config/
 cp -r $tar_dir/nvim/ ~/.config/

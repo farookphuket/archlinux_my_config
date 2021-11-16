@@ -34,4 +34,6 @@ feh --bg-fill --randomize ~/Pictures/wallpapers/* &
 run slstatus & 
 run ~/.config/dwm/set_kb.sh &
 
+run ~/.config/dwm/set_vm_screen.sh &
+
 sxhkd -c ~/.config/dwm/sxhkd/sxhkdrc &
