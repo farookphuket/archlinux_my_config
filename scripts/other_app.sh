@@ -2,5 +2,5 @@
 
 
 
-sudo pacman -S --needed --noconfirm tree htop feh nitrogen rsync nautilus krusader 
+sudo pacman -S --needed --noconfirm tree htop feh nitrogen rsync nautilus krusader rofi sxhkb
 
