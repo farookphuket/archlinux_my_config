@@ -45,3 +45,5 @@ sh $run_script_dir/applet.sh
 sh $run_script_dir/font_install.sh
 
 sh $run_script_dir/sound_video_editor.sh
+
+sh $run_script_dir/other_app.sh
