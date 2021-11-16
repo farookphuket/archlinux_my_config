@@ -22,7 +22,9 @@ popd
 
 yay -Syu
 
-pamac update
+# pamac not has install yet at this point 
+# last edit 17 Nov 2021
+# pamac update
 
  
 sudo pacman -Syyu 
