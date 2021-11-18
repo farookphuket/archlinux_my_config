@@ -15,6 +15,21 @@
 
 
 
+### ============ problem solved
+
+1. date 10 Nov 2021 problem solved.
+
+
+
+
+### ============ my problem 
+
+1. I cannot make the color status [date on 18 Nov 2021]
+
+
+
+
+
 ### ============ my problem 10 Nov 2021 
 
 1. bluetooth not auto start.
