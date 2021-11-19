@@ -26,14 +26,14 @@ run "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 
 run "numlockx on"
 
-run "conky -c $HOME/.config/dwm/system-overview"
+run "conky -c $HOME/.config/dwm/conky/system-overview"
 
 feh --bg-fill --randomize ~/Pictures/wallpapers/* &
 
 
 run slstatus & 
-run ~/.config/dwm/set_kb.sh &
+run ~/.config/dwm/custom_script/set_kb.sh &
 
-run ~/.config/dwm/set_vm_screen.sh &
+run ~/.config/dwm/custom_script/set_vm_screen.sh &
 
 sxhkd -c ~/.config/dwm/sxhkd/sxhkdrc &

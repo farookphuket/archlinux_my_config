@@ -8,16 +8,16 @@ super + shift + Return
     urxvt -e "ranger" 
 
 super + F1
-    brave
+    brave 
 
 super + F2
-	firefox
+	firefox -no-default-browser-check
 
 super + F3
-    chromium
+    chromium -no-default-browser-check
 
 super + F4
-    google-chrome-stable
+    google-chrome-stable  -no-default-browser-check
 
 super + F6 
     vlc
@@ -38,7 +38,7 @@ super + m
     urxvt -e "cmus" ; sleep 5s ; cmus-remote -C "update-cache -f"
 
 super + x
-    urxvt -e sh ~/.config/dwm/exit.sh 
+    urxvt -e sh ~/.config/dwm/custom_script/exit.sh 
 
 super + v
    pavucontrol 

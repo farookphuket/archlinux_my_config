@@ -38,7 +38,7 @@ super + m
     urxvt -e "cmus" ; sleep 5s ; cmus-remote -C "update-cache -f"
 
 super + x
-    urxvt -e sh ~/.config/dwm/exit.sh 
+    urxvt -e sh ~/.config/dwm/custom_script/exit.sh 
 
 super + v
    pavucontrol 
