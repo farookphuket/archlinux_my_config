@@ -8,16 +8,16 @@ super + shift + Return
     urxvt -e "ranger" 
 
 super + F1
-    brave
+    brave 
 
 super + F2
-	firefox
+	firefox -no-default-browser-check
 
 super + F3
-    chromium
+    chromium -no-default-browser-check
 
 super + F4
-    google-chrome-stable
+    google-chrome-stable  -no-default-browser-check
 
 super + F6 
     vlc
