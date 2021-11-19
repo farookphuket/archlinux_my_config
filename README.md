@@ -7,6 +7,161 @@
 
 
 
+## ============== to install this ======================================
+
+> to run setup type the below command in your terminal .
+
+```
+cd ~/ 
+git clone https://github.com/farookphuket/archlinux_my_config.git 
+cd ~/archlinux_my_config 
+sh setup.sh
+
+```
+> the above command will do :
+1. change the working dir to `Home` 
+2. clone the code from the repo 
+3. change the working dir to `~/archlinux_my_config`
+4. run setup.sh to start the installation 
+
+## ============== Warning! ===============================
+
+> this code will install all the program that I(Farook) using it in my real life 
+work the install time will be really depending up on your internet speed it is 
+3 hours 30 mins. on my every test.
+> make sure you really want to run this or you better of to view the file  
+`scripts/call_script.sh` to just select the program you want to install and use 
+before you run the `setup` script which will take too much time.
+
+> the file `scripts/call_script.sh` content on 19 Nov 2021 :
+
+```
+
+#!/bin/bash
+
+
+
+# this script will call another script 
+
+
+run_script_dir=~/archlinux_my_config/scripts
+
+sh $run_script_dir/bluetooth.sh
+
+
+# code editor 
+sh $run_script_dir/code_editor.sh 
+
+
+# download_tools.sh 
+sh $run_script_dir/download_tools.sh 
+
+
+sh $run_script_dir/gimp.sh 
+
+sh $run_script_dir/gnome_app.sh 
+
+sh $run_script_dir/iso_image_writer.sh 
+
+sh $run_script_dir/kde_app.sh 
+
+sh $run_script_dir/libre_office.sh 
+
+sh $run_script_dir/media_player_app.sh 
+
+sh $run_script_dir/screen_capture.sh
+
+sh $run_script_dir/shutter.sh 
+
+sh $run_script_dir/virt-manager.sh 
+
+sh $run_script_dir/virtualbox.sh 
+
+sh $run_script_dir/xfce4_app.sh 
+
+sh $run_script_dir/applet.sh
+
+sh $run_script_dir/font_install.sh
+
+sh $run_script_dir/sound_video_editor.sh
+
+sh $run_script_dir/other_app.sh
+
+sh $run_script_dir/web_browser.sh
+
+
+
+```
+
+
+
+
+
+
+# Install Arch Linux Farook's way
+> install arck linux is not easy but it is not either difficult so please 
+> check this video! it's maybe can help you some.
+> good luck
+
+
+[![watch how to install arch linux on laptop](http://img.youtube.com/vi/yD3ub-qQGZY/0.jpg)](http://www.youtube.com/watch?v=yD3ub-qQGZY "")
+
+
+
+## The icons theme I use now
+
+> the icon theme call "revengeShip" 
+> to change the new theme press `Mod+d` then type `loo` select 
+`Customize Look and Feel`
+
+
+
+[look_done]:https://i.ibb.co/xmvpvL1/look-done.png
+[select_menu]:https://i.ibb.co/5B9mkV8/Select-menu-look.png
+
+### ========= open Look and Feel to change theme,icon
+
+![change theme icon][select_menu]
+
+
+
+### ======== select menu tab
+
+![select menu tab done][look_done]
+
+
+
+
+
+
+
+[regen_blue]:https://i.ibb.co/sRnBBTS/2021-04-28-icons.png
+
+![my icon theme][regen_blue]
+
+
+---
+
+[cursor_theme]:https://i.ibb.co/J581Fxb/Cursor-themes.png
+
+[icon_theme]:https://i.ibb.co/zGRGnJm/Cursor-themes-1.png
+
+
+## Cursor Theme
+
+
+![cursor theme][cursor_theme]
+
+
+
+
+## Icon Theme
+
+![icon theme][icon_theme]
+
+
+
+
 ### ============= setup bluetooth 
 > just follow this tutorial here.
 > `https://www.jeremymorgan.com/tutorials/linux/how-to-bluetooth-arch-linux/` 
