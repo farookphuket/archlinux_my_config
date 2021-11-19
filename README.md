@@ -7,7 +7,7 @@
 
 
 
-## ============== to install this ======================================
+## ============== to install this  
 
 > to run setup type the below command in your terminal .
 
@@ -23,6 +23,17 @@ sh setup.sh
 2. clone the code from the repo 
 3. change the working dir to `~/archlinux_my_config`
 4. run setup.sh to start the installation 
+
+
+
+> OR you type them all in one line : 
+
+> `cd ~/ && git clone https://github.com/farookphuket/archlinux_my_config.git && cd ~/archlinux_my_config && sh setup.sh` 
+
+> make sure you accept them all otherwise the script will do nothing!.
+
+
+
 
 ## ============== Warning! ===============================
 
