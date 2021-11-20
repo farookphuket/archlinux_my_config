@@ -20,3 +20,8 @@ sudo pacman -S --needed --noconfirm tmux neovim powerline code atom ranger
 
 sudo pacman -S --needed --noconfirm tree  nodejs npm composer rsync rxvt-unicode alacritty
 
+
+# only to set composer for using laravel installer global 
+# last edit 21 Nov 21
+# this way you can just type laravel new to create new laravel project
+composer global require laravel/installer
