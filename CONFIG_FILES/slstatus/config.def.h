@@ -66,10 +66,10 @@ static const char unknown_str[] = "n/a";
 static const struct arg args[] = {
 	/* function format          argument */
     /* date format year-month-date day time format 12 hours 12:23:45 pm. */
+	{ uptime, "%s ",           NULL },
 	{ cpu_perc, "[cpu %s%] ",           NULL },
 	{ datetime, "%s",           "%F %A %I:%M:%S %P " },
 	{ keymap, " %s ",           NULL },
-	{ uptime, "%s ",           NULL },
 /* 
  * un comment by remove slash+star sign star+slash out from the below line 
  * if you want to see net speed and wi fi id in your bar
