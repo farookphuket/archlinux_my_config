@@ -173,6 +173,25 @@ sh $run_script_dir/web_browser.sh
 
 
 
+
+### ============= date 25 Nov 2021 
+
+> set ueberzug as the image preview for ranger
+
+
+
+
+
+
+[ranger_ueberzug]:https://i.ibb.co/8Mnfb6m/ranger.png
+
+!["use ueberzug as ranger preview image"][ranger_ueberzug]
+
+
+
+
+
+
 ### ============= setup bluetooth 
 > just follow this tutorial here.
 > `https://www.jeremymorgan.com/tutorials/linux/how-to-bluetooth-arch-linux/` 
