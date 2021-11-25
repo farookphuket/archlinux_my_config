@@ -15,8 +15,9 @@ fi
 
 sudo pacman -S --needed gvim 
 
-sudo pacman -S --needed --noconfirm tmux neovim powerline code atom ranger 
+sudo pacman -S --needed --noconfirm tmux neovim powerline code atom 
 
+sudo pacman -S --needed --noconfirm ranger ueberzug
 
 sudo pacman -S --needed --noconfirm tree  nodejs npm composer rsync rxvt-unicode alacritty
 
