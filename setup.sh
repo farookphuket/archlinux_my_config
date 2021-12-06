@@ -56,12 +56,12 @@ config_des_dir=~/.config
 
 
 # ====== copy vim,neovim,tmux,ranger,powerline config 
-cp -r $tar_dir/VIM_MONOKAI_THEME/.vim ~/ 
+cp -r $tar_dir/VIM_DRACULA_THEME/.vim ~/ 
 cp -r $tar_dir/ranger/ ~/.config/ 
 cp -r $tar_dir/powerline/ ~/.config/
 cp -r $tar_dir/nvim/ ~/.config/
 
-cp $tar_dir/VIM_MONOKAI_THEME/.vimrc ~/
+cp $tar_dir/VIM_DRACULA_THEME/.vimrc ~/
 cp $tar_dir/.bashrc ~/
 cp $tar_dir/.tmux.conf ~/
 cp $tar_dir/.Xresources ~/

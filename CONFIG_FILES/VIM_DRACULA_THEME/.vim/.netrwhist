@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/farook/simple_arch'
+let g:netrw_dirhist_6='/srv/http/lav8.lap'
+let g:netrw_dirhist_5='/srv/http'
+let g:netrw_dirhist_4='/srv/http/lav8.lap'
+let g:netrw_dirhist_3='/srv/http'
+let g:netrw_dirhist_2='/srv/http/lav8.lap'
+let g:netrw_dirhist_1='/home/farook'

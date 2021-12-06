@@ -44,6 +44,9 @@ work the install time will be really depending up on your internet speed it is
 `scripts/call_script.sh` to just select the program you want to install and use 
 before you run the `setup` script which will take too much time.
 
+> you can just feel free to comment by put `#` in front the `sh` command line 
+> if any of the program you will not use it
+
 > the file `scripts/call_script.sh` content on 19 Nov 2021 :
 
 ```
