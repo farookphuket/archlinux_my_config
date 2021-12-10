@@ -36,6 +36,10 @@ Plug 'mattn/emmet-vim'
 Plug 'nanotech/jellybeans.vim'
 
 
+
+" try nerdtree plugin 11 July 2020
+Plug 'preservim/nerdtree'
+
 " post install (yarn install | npm install) then load plugin only for editing supported files
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 " this plugin will not working unless you have run 
