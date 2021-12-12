@@ -3,7 +3,7 @@
 
 
 sudo pacman -S --needed --noconfirm tree htop feh nitrogen  rofi sxhkd conky
-sudo pacman -S --needed --noconfirm inkscape rsync nautilus krusader
+sudo pacman -S --needed --noconfirm inkscape rsync nautilus krusader picom
 
 sleep 5s
 

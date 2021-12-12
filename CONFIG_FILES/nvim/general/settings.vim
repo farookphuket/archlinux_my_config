@@ -101,4 +101,10 @@ augroup FAROOK
  "   autocmd FileType cpp,cxx,h,hpp,c,php,txt,html :call GoCoc()
 
     autocmd CursorHold  * update
+   
+    " transparent bg
+    "autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
+    " the transparent is hard to see for me so by default I just disable this 
+    " option to use transparent background un-comment 'autocmd vimenter' line
+    
 augroup END

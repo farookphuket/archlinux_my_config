@@ -19,6 +19,7 @@ run "pamac-tray"
 
 run "xfce4-power-manager"
 
+run "picom"
 
 run "/usr/lib/xfce4/notifyd/xfce4-notifyd"
 

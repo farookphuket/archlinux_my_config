@@ -1,5 +1,5 @@
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
-# copy this config file from laptop 16 Nov 2021
+
 # Import additional configuration files
 #
 # Imports are loaded in order, skipping all missing files, with the importing
@@ -114,15 +114,15 @@ font:
     family: SauceCodePro NF
 
     # The `style` can be specified to pick a specific face.
-    #style: Regular
+    style: Bold
 
   # Bold font face
-  #bold:
+  bold:
     # Font family
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    #family: monospace 
+    family: SauceCodePro NF
 
     # The `style` can be specified to pick a specific face.
     style: Bold
@@ -150,7 +150,7 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 17.0
+  size: 19.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -162,9 +162,9 @@ font:
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the
   # right, increasing `y` moves the glyph upward.
-  #glyph_offset:
-  #  x: 0
-  #  y: 0
+  glyph_offset:
+    x: 0
+    y: 0
 
   # Thin stroke font rendering (macOS only)
   #
@@ -176,11 +176,11 @@ font:
 #draw_bold_text_with_bright_colors: false
 
 # Colors (Tomorrow Night)
-#colors:
+colors:
   # Default colors
-  #primary:
-  #  background: '#1d1f21'
-  #  foreground: '#c5c8c6'
+  primary:
+    background: '#1d1f21'
+    foreground: '#c5c8c6'
 
     # Bright and dim foreground colors
     #
@@ -188,8 +188,8 @@ font:
     # present. If the bright foreground color is not set, or
     # `draw_bold_text_with_bright_colors` is `false`, the normal foreground
     # color will be used.
-    #dim_foreground: '#828482'
-    #bright_foreground: '#eaeaea'
+    dim_foreground: '#828482'
+    bright_foreground: '#eaeaea'
 
   # Cursor colors
   #
@@ -214,19 +214,19 @@ font:
   # Search colors
   #
   # Colors used for the search bar and match highlighting.
-  #search:
+  search:
     # Allowed values are CellForeground/CellBackground, which reference the
     # affected cell, or hexadecimal colors like #ff00ff.
-    #matches:
-    #  foreground: '#000000'
-    #  background: '#ffffff'
-    #focused_match:
-    #  foreground: '#ffffff'
-    #  background: '#000000'
+    matches:
+      foreground: '#000000'
+      background: '#ffffff'
+    focused_match:
+      foreground: '#ffffff'
+      background: '#000000'
 
-    #bar:
-    #  background: '#c5c8c6'
-    #  foreground: '#1d1f21'
+    bar:
+      background: '#c5c8c6'
+      foreground: '#1d1f21'
 
   # Keyboard regex hints
   #hints:
@@ -234,17 +234,17 @@ font:
     #
     # Allowed values are CellForeground/CellBackground, which reference the
     # affected cell, or hexadecimal colors like #ff00ff.
-    #start:
-    #  foreground: '#1d1f21'
-    #  background: '#e9ff5e'
+    start:
+      foreground: '#1d1f21'
+      background: '#e9ff5e'
 
     # All characters after the first one in the hint label
     #
     # Allowed values are CellForeground/CellBackground, which reference the
     # affected cell, or hexadecimal colors like #ff00ff.
-    #end:
-    #  foreground: '#e9ff5e'
-    #  background: '#1d1f21'
+    end:
+      foreground: '#e9ff5e'
+      background: '#1d1f21'
 
   # Line indicator
   #
@@ -252,9 +252,9 @@ font:
   # search and vi mode.
   #
   # By default, these will use the opposing primary color.
-  #line_indicator:
-  #  foreground: None
-  #  background: None
+  line_indicator:
+    foreground: None
+    background: None
 
   # Selection colors
   #
@@ -267,15 +267,15 @@ font:
   #  background: CellForeground
 
   # Normal colors
-  #normal:
-  #  black:   '#1d1f21'
-  #  red:     '#cc6666'
-  #  green:   '#b5bd68'
-  #  yellow:  '#f0c674'
-  #  blue:    '#81a2be'
-  #  magenta: '#b294bb'
-  #  cyan:    '#8abeb7'
-  #  white:   '#c5c8c6'
+  normal:
+    black:   '#1d1f21'
+    red:     '#cc6666'
+    green:   '#b5bd68'
+    yellow:  '#f0c674'
+    blue:    '#81a2be'
+    magenta: '#b294bb'
+    cyan:    '#8abeb7'
+    white:   '#c5c8c6'
 
   # Bright colors
   #bright:
@@ -357,7 +357,7 @@ font:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-#background_opacity: 1.0
+background_opacity: 0.8
 
 #selection:
   # This string contains all characters that are used as separators for

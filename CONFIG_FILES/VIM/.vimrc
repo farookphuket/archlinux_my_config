@@ -87,5 +87,8 @@ augroup FAROOK
     autocmd FileType cpp,cxx,h,hpp,c,php,txt,html :call GoCoc()
 
     autocmd CursorHold  * update
+
+    " transparent bg
+    autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
 augroup END
 

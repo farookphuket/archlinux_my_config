@@ -20,7 +20,7 @@ if executable('rg')
 endif
 
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48:2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 function! s:check_back_space() abort
 
@@ -87,5 +87,8 @@ augroup FAROOK
     autocmd FileType cpp,cxx,h,hpp,c,php,txt,html :call GoCoc()
 
     autocmd CursorHold  * update
+
+    " transparent bg
+    autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
 augroup END
 
