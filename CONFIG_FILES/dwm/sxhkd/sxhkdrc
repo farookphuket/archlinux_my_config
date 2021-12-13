@@ -45,3 +45,9 @@ super + v
 
 Print 
     spectacle
+
+
+
+#Picom Toggle
+ctrl + alt + o
+    ~/.config/dwm/scripts/picom-toggle.sh
