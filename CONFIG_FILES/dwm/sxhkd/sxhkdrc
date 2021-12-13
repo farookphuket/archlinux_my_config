@@ -25,6 +25,9 @@ super + F6
 super + shift + h
     urxvt -e htop
 
+super + shift + l 
+    blurlock
+
 super + d
 	rofi -show drun -theme sidebar
 
@@ -45,7 +48,6 @@ super + v
 
 Print 
     spectacle
-
 
 
 #Picom Toggle
