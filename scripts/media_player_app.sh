@@ -18,4 +18,7 @@ pamac install vlc
 
 
 # sound player , editor
-sudo pacman -S  --needed --noconfirm audacious amarok clementine audacity
+sudo pacman -S  --needed --noconfirm audacious  clementine audacity
+
+# amarok is take too much time to install so I just disabled here
+# yay -S amarok-git --needed 

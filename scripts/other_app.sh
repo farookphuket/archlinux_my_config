@@ -4,6 +4,7 @@
 
 sudo pacman -S --needed --noconfirm tree htop feh nitrogen  rofi sxhkd conky
 sudo pacman -S --needed --noconfirm inkscape rsync nautilus krusader picom
+sudo pacman -S --needed --noconfirm vlc thunderbird
 
 sleep 5s
 
