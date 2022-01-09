@@ -49,3 +49,6 @@ sh $run_script_dir/sound_video_editor.sh
 sh $run_script_dir/other_app.sh
 
 sh $run_script_dir/web_browser.sh
+
+# install puddletag on 09 Jan 2022
+sh $run_script_dir/puddletag.sh
