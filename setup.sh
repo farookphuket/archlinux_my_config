@@ -14,7 +14,7 @@ error() { \
 # ============== install the need program START ===============================
 
 
-sudo pacman --noconfirm --needed -Sy dialog git || error "Error syncing the repos."
+sudo pacman  -S dialog git --needed --noconfirm  || error "Error syncing the repos."
 
 
 
@@ -66,6 +66,11 @@ cp $tar_dir/.bashrc ~/
 cp $tar_dir/.tmux.conf ~/
 cp $tar_dir/.Xresources ~/
 
+
+
+# touchpad click able 12 Jan 2021 
+sudo pacman -Syu xf86-input-libinput
+sudo cp $tar_dir/30-touchpad.conf /etc/X11/xorg.conf.d/
 
 
 # using flag --disable-download-timeout will help in case of slow connection 
