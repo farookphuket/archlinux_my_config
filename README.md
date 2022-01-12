@@ -206,7 +206,7 @@ sh $run_script_dir/web_browser.sh
 ### ============ problem solved
 
 1. date 10 Nov 2021 problem solved.
-
+2. date 12 Jan 2022 fixed lost click on touch pad.
 
 
 

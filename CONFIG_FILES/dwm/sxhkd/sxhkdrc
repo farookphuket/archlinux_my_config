@@ -1,6 +1,3 @@
-
-
-
 super + Return
 	alacritty --working-directory ~/
 
@@ -25,17 +22,12 @@ super + F6
 super + shift + h
     urxvt -e htop
 
-<<<<<<< HEAD
-super + shift + l 
-=======
+#(install i3exit on 31 Dec 2021)
 super + shift + l
->>>>>>> 477515e (install i3exit on 31 Dec 2021)
     blurlock
 
 super + d
 	rofi -show drun -theme sidebar
-
-
 
 
 super + shift + b
