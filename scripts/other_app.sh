@@ -7,7 +7,7 @@ sudo pacman -S --needed --noconfirm inkscape rsync nautilus krusader picom
 
 sudo pacman -S --needed --noconfirm vlc thunderbird usbutils
 
-sudo pacman -S --needed --noconfirm i3exit
+sudo pacman -S --needed --noconfirm i3exit arandr
 
 
 sleep 5s
