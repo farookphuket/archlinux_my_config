@@ -89,6 +89,6 @@ augroup FAROOK
     autocmd CursorHold  * update
 
     " transparent bg
-    autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
+    "autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
 augroup END
 

@@ -7,10 +7,19 @@ sudo pacman -S --needed --noconfirm inkscape rsync nautilus krusader picom
 
 sudo pacman -S --needed --noconfirm vlc thunderbird usbutils
 
-sudo pacman -S --needed --noconfirm i3exit arandr
+sudo pacman -S --needed --noconfirm arandr
+
+# 15 Jan 2022 i3exit install 
+pushd ~/
+git clone https://aur.archlinux.org/i3exit.git
+cd ~/i3exit 
+makepkg -si 
+
+sleep 5s 
+popd
 
 
-sleep 5s
+#sleep 5s
 
 # =============================================================================
 # the folder `.dwm` is will call by `dwm` script for the auto load program like 

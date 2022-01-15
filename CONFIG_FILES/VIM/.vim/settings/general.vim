@@ -57,7 +57,7 @@ set complete+=kspell
 
 " copy from ThePrimeagen
 "   show extra column on the left if thereis error sign
-set signcolumn=yes
+"set signcolumn=yes
 
 
 set nohlsearch
@@ -83,7 +83,7 @@ set smarttab
 " Who wants an 8 character tab? Not me!
 set shiftwidth=4
 set softtabstop=4
-
+"set shiftwidth=4
 
 
 set guicursor=
@@ -97,7 +97,6 @@ set hidden
 set noerrorbells
 
 
-set shiftwidth=4
 
 set expandtab
 

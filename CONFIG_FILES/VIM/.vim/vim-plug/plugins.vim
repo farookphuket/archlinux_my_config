@@ -18,8 +18,6 @@ Plug 'tweekmonster/gofmt.vim'
 Plug 'tpope/vim-fugitive'
 
 
-" SuperTap 14-Sep-2019
-Plug 'ervandew/supertab'
 
 Plug 'vim-utils/vim-man'
 
@@ -42,7 +40,7 @@ Plug 'tpope/vim-dispatch'
 
 "  TOOOOOOOOOOOOO
 
-Plug 'gruvbox-community/gruvbox'
+"Plug 'gruvbox-community/gruvbox'
 
 
 
@@ -51,13 +49,13 @@ Plug 'nanotech/jellybeans.vim'
 
 
 
-Plug 'sainnhe/gruvbox-material'
+"Plug 'sainnhe/gruvbox-material'
 
-Plug 'phanviet/vim-monokai-pro'
+"Plug 'phanviet/vim-monokai-pro'
 
 Plug 'vim-airline/vim-airline'
 
-Plug 'flazz/vim-colorschemes'
+"Plug 'flazz/vim-colorschemes'
 
 Plug '/home/mpaulson/personal/vim-be-good'
 
@@ -87,7 +85,7 @@ Plug 'jiangmiao/auto-pairs'
 
 " post install (yarn install | npm install) then load plugin only for editing supported files
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-" this plugin will not working unless you have run 
+" this plugin will not working unless you have run
 " 'npm install -g prettier'  or 'sudo npm install -g prettier ' in manjaro
 
 
