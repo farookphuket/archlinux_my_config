@@ -1,7 +1,7 @@
-#!/bin/bash 
+#!/bin/bash
 
 
-# run script dir 
+# run script dir
 
 run_script_dir=~/archlinux_my_config/scripts
 
@@ -33,16 +33,16 @@ welcome || error "User choose to exit."
 sudo pacman -Syyu --disable-download-timeout
 
 
-# ============= setup yay 
+# ============= setup yay
 sh $run_script_dir/yay.sh
 
 
 # ========================= Shutter ===========================================
 # shutter is the screen capture ,
-# shutter will not working if install using pacman 
+# shutter will not working if install using pacman
 # last edit 30 Oct 2021
-# setup snap  
-sh $run_script_dir/snapd.sh 
+# setup snap
+sh $run_script_dir/snapd.sh
 
 
 sh $run_script_dir/call_script.sh
@@ -50,14 +50,14 @@ sh $run_script_dir/call_script.sh
 # =============================================================================
 # ============== install the need program END =================================
 
-# ============== copy config file START ======================================= 
+# ============== copy config file START =======================================
 tar_dir=~/archlinux_my_config/CONFIG_FILES
 config_des_dir=~/.config
 
 
-# ====== copy vim,neovim,tmux,ranger,powerline config 
-cp -r $tar_dir/VIM/.vim ~/ 
-cp -r $tar_dir/ranger/ ~/.config/ 
+# ====== copy vim,neovim,tmux,ranger,powerline config
+cp -r $tar_dir/VIM/.vim ~/
+cp -r $tar_dir/ranger/ ~/.config/
 cp -r $tar_dir/powerline/ ~/.config/
 cp -r $tar_dir/nvim/ ~/.config/
 
@@ -68,12 +68,13 @@ cp $tar_dir/.Xresources ~/
 
 
 
-# touchpad click able 12 Jan 2021 
+# touchpad click able 12 Jan 2021 use "3 tap for right click"
 sudo pacman -Syu xf86-input-libinput
 sudo cp $tar_dir/30-touchpad.conf /etc/X11/xorg.conf.d/
+sudo cp $tar_dir/10-synaptics.conf /etc/X11/xorg.conf.d/
 
 
-# using flag --disable-download-timeout will help in case of slow connection 
+# using flag --disable-download-timeout will help in case of slow connection
 sudo pacman -Syyu --disable-download-timeout
 
 
@@ -88,7 +89,7 @@ sudo pacman -Syyu --disable-download-timeout
 # ====== copy zsh config
 pushd ~/
 
-git clone https://gitlab.com/farookphuket/my_zsh.git 
+git clone https://gitlab.com/farookphuket/my_zsh.git
 
 # run the script from ~/my_zsh where just has clone
 sh ~/my_zsh/setup.sh
@@ -101,15 +102,15 @@ popd
 
 sleep 5s
 
-# ============== copy config file END ========================================= 
+# ============== copy config file END =========================================
 
 fn_goodbye(){
     dialog --colors \
         --title "Operation done!" \
-        --msgbox "\Z4The operation has been done! 
+        --msgbox "\Z4The operation has been done!
             \\nThe change will take an effect in the next boot." \
                 16 60
-    
+
 }
 
 fn_goodbye

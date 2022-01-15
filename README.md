@@ -191,8 +191,13 @@ sh $run_script_dir/web_browser.sh
 !["use ueberzug as ranger preview image"][ranger_ueberzug]
 
 
+### ============= touchpad on laptop
+> I have spend all day on 15 Jan 2022 try to find "how to enable tab click" on 
+> touchpad there will be long to write here I will make an article one day soon 
+> but for now the use is 
 
-
+- left click by tab 1 finger will act like do left click
+- right click by tab 3 fingers will show the right click menu
 
 
 ### ============= setup bluetooth 
