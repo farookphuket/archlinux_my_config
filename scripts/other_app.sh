@@ -16,6 +16,8 @@ cd ~/i3exit
 makepkg -si 
 
 sleep 5s 
+rm -rf ~/i3exit
+
 popd
 
 
