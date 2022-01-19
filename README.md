@@ -201,9 +201,13 @@ Enter now it connected then I type `exit` to quit out of iwctl.
 - now make sure I have the internet access by send ping to google 
 `ping google.com` I've got a reply the next thing to do is check the media by 
 type `lsblk` so I've got my hard-dive name "nvme0" that has the partition as 
-`nvme0n1p1`,`nvme0n1p2`,`nvme0n1p3` so my command to mount is 
+`nvme0n1p1`,`nvme0n1p2`,`nvme0n1p3` so my command to mount is (line by line)
+
 > `mount /dev/nvme0n1p2 /mnt` 
+
 > `mount /dev/nvme0n1p1 /boot` 
+
+
 if I type 'lsblk' command again this shoud mount the media for me next command 
 is `arch-chroot /mnt /bin/bash` now I am ready to install grub.
 - I type 
