@@ -7,7 +7,7 @@ sudo pacman -S --needed --noconfirm inkscape rsync nautilus krusader picom
 
 sudo pacman -S --needed --noconfirm vlc thunderbird usbutils
 
-sudo pacman -S --needed --noconfirm arandr
+sudo pacman -S --needed --noconfirm arandr xsel
 
 # 15 Jan 2022 i3exit install 
 pushd ~/
