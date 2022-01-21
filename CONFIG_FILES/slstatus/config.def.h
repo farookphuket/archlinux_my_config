@@ -69,12 +69,19 @@ static const struct arg args[] = {
 	{ uptime, "%s ",           NULL },
 	{ cpu_perc, "[cpu %s%] ",           NULL },
 	{ datetime, "%s",           "%F %A %I:%M:%S %P " },
+
+  /* show input keyboard layout "en","th" */
 	{ keymap, " %s ",           NULL },
 /* 
  * un comment by remove slash+star sign star+slash out from the below line 
- * if you want to see net speed and wi fi id in your bar
+ * if you want to see net speed and wifi id in your status bar 
+ * replace "wlp2s0" with your interface name that you get from `ip addr` 
+ * command
  * */
 /*	{ netspeed_tx, "%s ",           "wlp2s0" }, */
+
+  /* un comment the below line to show what the wifi network that you've 
+   * connected to */
 /*	{ wifi_essid, "%s ",           "wlp2s0" }, */
 
 /* un-comment the below line to show user login name in the bar */
