@@ -19,7 +19,9 @@ sudo pacman -S --needed --noconfirm tmux neovim powerline code atom
 
 sudo pacman -S --needed --noconfirm ranger ueberzug
 
-sudo pacman -S --needed --noconfirm tree  nodejs npm composer rsync rxvt-unicode alacritty
+sudo pacman -S --needed --noconfirm tree rsync rxvt-unicode alacritty
+
+sudo pacman -S --needed --noconfirm yarn nodejs npm composer
 
 
 # only to set composer for using laravel installer global 
