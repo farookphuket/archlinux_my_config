@@ -9,6 +9,9 @@ sudo pacman -S --needed --noconfirm vlc thunderbird usbutils
 
 sudo pacman -S --needed --noconfirm arandr xsel
 
+# screen zoom in 10 Feb 2022
+sudo pacman -S --needed --noconfirm kmag
+
 # 15 Jan 2022 i3exit install 
 pushd ~/
 git clone https://aur.archlinux.org/i3exit.git
