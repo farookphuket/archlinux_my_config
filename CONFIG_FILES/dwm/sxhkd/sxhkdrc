@@ -6,6 +6,10 @@
 super + Return
 	konsole --workdir ~/
 
+# added 16 Feb 2022 
+super + Slash
+    rofi modi -show run
+
 super + shift + Return
     urxvt -e "ranger" 
 
