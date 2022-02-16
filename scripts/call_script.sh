@@ -20,11 +20,11 @@ sh $run_script_dir/download_tools.sh
 
 #sh $run_script_dir/gimp.sh 
 
-#sh $run_script_dir/gnome_app.sh 
+sh $run_script_dir/gnome_app.sh 
 
 sh $run_script_dir/iso_image_writer.sh 
 
-#sh $run_script_dir/kde_app.sh 
+sh $run_script_dir/kde_app.sh 
 
 sh $run_script_dir/libre_office.sh 
 
@@ -38,13 +38,13 @@ sh $run_script_dir/screen_capture.sh
 
 #sh $run_script_dir/virtualbox.sh 
 
-#sh $run_script_dir/xfce4_app.sh 
+sh $run_script_dir/xfce4_app.sh 
 
 sh $run_script_dir/applet.sh
 
 sh $run_script_dir/font_install.sh
 
-sh $run_script_dir/sound_video_editor.sh
+#sh $run_script_dir/sound_video_editor.sh
 
 sh $run_script_dir/other_app.sh
 

@@ -6,9 +6,9 @@
 super + Return
 	konsole --workdir ~/
 
-# added 16 Feb 2022 
-super + Slash
-    rofi modi -show run
+# added 16 Feb 2022 show rofi like pop-os
+super + slash
+    rofi modi -show drun -theme fancy.rasi
 
 super + shift + Return
     urxvt -e "ranger" 
