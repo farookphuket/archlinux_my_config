@@ -10,6 +10,21 @@ sudo pacman -S dmidecode edk2-ovmf --needed
 sudo pacman -S --needed virt-manager qemu vde2 ebtables dnsmasq bridge-utils openbsd-netcat 
 
 
+# ================== 16 Feb 2022 cannot install arch linux guest ============= 
+# copy from https://bbs.archlinux.org/viewtopic.php?id=250735
+# on 16 Feb 2022
+# to install arch linux follow this page 
+# https://www.freecodecamp.org/news/how-to-install-arch-linux/
+sudo mkdir -p /etc/qemu
+
+sudo cp /usr/share/qemu/firmware/60-edk2-ovmf-x86_64.json /etc/qemu
+
+sudo systemctl restart libvirtd
+
+# ================== fixed cannot boot after install arch linux on 
+# guest machine
+
+
 # fix network default not define 14 Nov 2021 from :
 # https://blog.programster.org/kvm-missing-default-network
 sudo cp -r $CONFIG_FILE_DIR/networks/ /usr/share/libvirt/ 
