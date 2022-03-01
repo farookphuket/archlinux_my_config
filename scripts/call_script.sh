@@ -48,6 +48,8 @@ sh $run_script_dir/font_install.sh
 
 sh $run_script_dir/other_app.sh
 
+sh $run_script_dir/photofilmstrip.sh
+
 sh $run_script_dir/web_browser.sh
 
 # install puddletag on 09 Jan 2022
