@@ -48,7 +48,12 @@ sh $run_script_dir/font_install.sh
 
 sh $run_script_dir/other_app.sh
 
-sh $run_script_dir/photofilmstrip.sh
+# photofilmstrip is has Error from python script 
+# 1 Mar 2022
+# sh $run_script_dir/photofilmstrip.sh
+
+# to make photo slideshow asa video
+sh $run_script_dir/4kslideshowmaker.sh
 
 sh $run_script_dir/web_browser.sh
 

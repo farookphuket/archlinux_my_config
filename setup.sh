@@ -68,10 +68,14 @@ cp $tar_dir/.Xresources ~/
 
 
 
-# touchpad click able 12 Jan 2021 use "3 tap for right click"
+# touchpad click able 12 Jan 2021 use "2 tap for right click"
 sudo pacman -Syu xf86-input-libinput
 sudo cp $tar_dir/30-touchpad.conf /etc/X11/xorg.conf.d/
 sudo cp $tar_dir/10-synaptics.conf /etc/X11/xorg.conf.d/
+
+# this line fix the problem "Cannot use mouse click when using a multiple 
+# screen for the laptop" on 2 Mar 2022
+sudo cp $tar_dir/psmouse.conf /etc/modprobe.d/
 
 
 # using flag --disable-download-timeout will help in case of slow connection
