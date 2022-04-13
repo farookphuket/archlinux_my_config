@@ -59,3 +59,6 @@ sh $run_script_dir/web_browser.sh
 
 # install puddletag on 09 Jan 2022
 #sh $run_script_dir/puddletag.sh
+
+# nvidia driver for nvidia graphic card
+#sh $run_script_dir/nvidia-driver.sh

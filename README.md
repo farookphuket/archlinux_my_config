@@ -179,12 +179,31 @@ sh $run_script_dir/web_browser.sh
 
 # Report 
 
+---
+
+### ============ date 13 Apr 2022 
+> install `birdtray` 
+
+
+### birdtray icon
+
+[birdtray]:https://i.ibb.co/19s1MTN/13-apr-2022-install-birdtray.png
+
+![birdtray icon][birdtray]
+
+
+
+
+---
+
 ### ============ date 20 Jan 2022 
 > neovim cannot be copy to system clipboard to fix this I just install "xsel" 
 > `sudo pacman -S xsel` 
 > this package has already install within this run script from now 
 > the install script is list in `~/archlinux_my_config/scripts/other_app.sh` 
 > last update 20 Jan 2022.
+
+--- 
 
 ### ============ date 19 Jan 2022 
 > today (19 Jan 2022 at 07:43 a.m.) I almost have to re-install arch-linux 

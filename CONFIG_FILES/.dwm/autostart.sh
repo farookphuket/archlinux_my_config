@@ -21,6 +21,9 @@ run "xfce4-power-manager"
 
 run "picom"
 
+# 13 Apr 2022
+run "birdtray"
+
 run "/usr/lib/xfce4/notifyd/xfce4-notifyd"
 
 run "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
