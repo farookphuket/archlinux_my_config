@@ -175,7 +175,10 @@ sh $run_script_dir/web_browser.sh
 
 
 
+## ============ Remove Program Report
 
+> Atom will be no longer support on Dec 2022 so I have remove Atom from the 
+> installation.
 
 # Report 
 

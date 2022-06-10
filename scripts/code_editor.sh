@@ -15,7 +15,8 @@ fi
 
 sudo pacman -S --needed gvim 
 
-sudo pacman -S --needed --noconfirm tmux neovim powerline code atom 
+# atom will be no longer support on the end of Dec. 2022
+sudo pacman -S --needed --noconfirm tmux neovim powerline code  
 
 sudo pacman -S --needed --noconfirm ranger ueberzug
 
