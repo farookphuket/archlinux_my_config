@@ -182,6 +182,29 @@ sh $run_script_dir/web_browser.sh
 
 # Report 
 
+
+--- 
+
+### ============ date 5 july 2022 
+
+> I just find out that my "URXVT" cannot copy and past from clipboard 
+> this is the very easy fix from `https://www.tomica.net/blog/2019/01/fixing-urxvt-copy-paste/` 
+> just edit the "~/.Xresources" file by add the following line.
+
+```
+! Restore Ctrl+Shift+(c|v)
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+
+```
+
+> then run `xrdb -merge .Xresources` 
+> then re-open the URxvt again try to copy and past it should work now.
+
+
 ---
 
 ### ============ date 13 Apr 2022 
