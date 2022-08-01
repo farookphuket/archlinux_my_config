@@ -6,6 +6,11 @@
 > I just start to using Arch Linux on 10 Nov 2021 
 
 
+# Warning!!
+> before you run the command make sure you have a time to be always 
+> sit next to your computer as you have to type your password and press 
+> confirm for many many time on the installation.
+
 
 ## ============== to install this  
 
