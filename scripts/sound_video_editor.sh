@@ -7,3 +7,4 @@
 # aegisub is sub title editor for video 
 
 sudo pacman -S --needed --noconfirm audacity audacious mixxx aegisub 
+sudo pacman -S --needed --noconfirm handbrake

@@ -12,6 +12,9 @@ sudo pacman -S --needed --noconfirm arandr xsel
 # last added 23 Apr 2022
 sudo pacman -S --needed --noconfirm sushi nautilus-image-converter
 
+# fake background webcam and webcam program 25 Jul 2022
+#sudo yay -S fswebcam fake-background-webcam-git
+
 # screen zoom in 10 Feb 2022
 sudo pacman -S --needed --noconfirm kmag
 

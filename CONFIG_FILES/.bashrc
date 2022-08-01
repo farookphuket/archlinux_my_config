@@ -127,7 +127,7 @@ xterm*|rxvt*)
 esac
 
 
-
+# powerline thing
 if [ -f `which powerline-daemon`  ]; then
       powerline-daemon -q
         POWERLINE_BASH_CONTINUATION=1
@@ -145,7 +145,14 @@ fi
 export PATH
 
 
+# some time VirtualBox can go crazy so kill the service
 alias resize='killall VBoxClient && VBoxClient-all'
+
+
+# I love vim in my command line as well
+set -o vi
+
+# I love vs code so GUI text editor I prefer
 export EDITOR=/usr/bin/code-oss
 
 export XDG_RUNTIME_DIR=/run/user/$(id -u)
