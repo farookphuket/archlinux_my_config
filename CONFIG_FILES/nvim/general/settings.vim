@@ -108,3 +108,16 @@ augroup FAROOK
     " option to use transparent background un-comment 'autocmd vimenter' line
     
 augroup END
+
+
+
+" this is the change on 4 Aug 2022
+" I love the background deep dark 
+hi Normal ctermbg=16 guibg=#000000
+hi LineNr ctermbg=16 guibg=#000000
+
+
+" color scheme you can easily change by press : type colorscheme hit tab key
+" to select the color scheme you wish to use 
+" colorscheme gruvbox
+colorscheme jellybeans

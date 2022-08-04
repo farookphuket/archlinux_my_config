@@ -197,3 +197,17 @@ highlight ColorColumn ctermbg=0 guibg=lightgrey
 "   copy the setup from this page 19-Feb-2021
 "   https://medium.com/vim-drops/be-a-html-ninja-with-emmet-for-vim-feee15447ef1
 let g:user_emmet_leader_key=','
+
+
+
+" this is the change on 4 Aug 2022
+" I love the background deep dark 
+hi Normal ctermbg=16 guibg=#000000
+hi LineNr ctermbg=16 guibg=#000000
+
+
+" color scheme you can easily change by press : type colorscheme hit tab key
+" to select the color scheme you wish to use 
+
+" colorscheme gruvbox
+colorscheme jellybeans

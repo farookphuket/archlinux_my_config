@@ -4,7 +4,7 @@
 
 call plug#begin('~/.config/nvim/plugged') 
 
-"Plug 'morhetz/gruvbox'
+Plug 'morhetz/gruvbox'
 
 " coc
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -53,5 +53,3 @@ Plug 'ervandew/supertab'
 
 call plug#end()
 
-
-colorscheme jellybeans
