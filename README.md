@@ -4,7 +4,10 @@
 
 
 > I just start to using Arch Linux on 10 Nov 2021 
+
 > the nvim config copy from https://github.com/LunarVim/Neovim-from-scratch.git  
+
+
 > on 5 aug 2022 this will make neovim look cool and easy to use.
 
 
