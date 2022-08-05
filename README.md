@@ -8,10 +8,12 @@
 > on 5 aug 2022 this will make neovim look cool and easy to use.
 
 
+
 # Warning!!
 > before you run the command make sure you have a time to be always 
 > sit next to your computer as you have to type your password and press 
 > confirm for many many time on the installation.
+
 
 
 ## ============== to install this  
