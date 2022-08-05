@@ -3,7 +3,7 @@
 
 
 # this script will call another script 
-
+# edit this file by add "#" infront of any propgramyou do not want to install
 
 run_script_dir=~/archlinux_my_config/scripts
 

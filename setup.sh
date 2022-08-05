@@ -59,7 +59,13 @@ config_des_dir=~/.config
 cp -r $tar_dir/VIM/.vim ~/
 cp -r $tar_dir/ranger/ ~/.config/
 cp -r $tar_dir/powerline/ ~/.config/
-cp -r $tar_dir/nvim/ ~/.config/
+
+
+# copy the nvim config from chrisatmachine
+# cp -r $tar_dir/nvim/ ~/.config/
+# copy nvim config to ~/.config
+cp -r $tar_dir/nvim-chris/nvim ~/.config/
+
 
 cp $tar_dir/VIM/.vimrc ~/
 cp $tar_dir/.bashrc ~/
