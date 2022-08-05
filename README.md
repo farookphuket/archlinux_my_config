@@ -3,9 +3,46 @@
 
 
 
+
 > I just start to using Arch Linux on 10 Nov 2021 
 
-> the nvim config copy from https://github.com/LunarVim/Neovim-from-scratch.git  
+
+
+
+
+
+---
+
+## Copy chris's neovim config 
+
+> vim is my code editor for years now using vim you will learn new thing every day 
+
+
+
+
+> the nvim config copy from `git clone https://github.com/LunarVim/nvim-basic-ide.git` on the 6 Aug 2022
+
+
+> ***Extra keys ***
+
+```
+" multi cursor "
+select text then press Ctrl>n 
+
+" emmet "
+tye html code such as 
+div then hold Ctrl<button> follow by press ,, you will get 
+<div></div>
+ or ul>li*3>a then hold Ctrl<button> follow by press ,, you will get 
+
+ <ul>
+   <li><a href=""></a></li>
+   <li><a href=""></a></li>
+   <li><a href=""></a></li>
+ </ul>
+
+
+```
 
 
 > on 5 aug 2022 this will make neovim look cool and easy to use.

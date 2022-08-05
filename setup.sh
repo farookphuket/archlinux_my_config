@@ -64,7 +64,7 @@ cp -r $tar_dir/powerline/ ~/.config/
 # copy the nvim config from chrisatmachine
 # cp -r $tar_dir/nvim/ ~/.config/
 # copy nvim config to ~/.config
-cp -r $tar_dir/nvim-chris/nvim ~/.config/
+cp -r $tar_dir/nvim-2022/nvim ~/.config/
 
 
 cp $tar_dir/VIM/.vimrc ~/
