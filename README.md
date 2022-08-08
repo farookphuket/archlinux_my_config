@@ -13,43 +13,12 @@
 
 ---
 
-## Copy chris's neovim config 
 
-> vim is my code editor for years now using vim you will learn new thing every day 
-
-
-
-
-> the nvim config copy from `git clone https://github.com/LunarVim/nvim-basic-ide.git` on the 6 Aug 2022
-
-
-> ***Extra keys ***
-
-```
-" multi cursor "
-select text then press Ctrl>n 
-
-" emmet "
-tye html code such as 
-div then hold Ctrl<button> follow by press ,, you will get 
-<div></div>
- or ul>li*3>a then hold Ctrl<button> follow by press ,, you will get 
-
- <ul>
-   <li><a href=""></a></li>
-   <li><a href=""></a></li>
-   <li><a href=""></a></li>
- </ul>
-
-
-```
-
-
-> on 5 aug 2022 this will make neovim look cool and easy to use.
 
 
 
 # Warning!!
+
 > before you run the command make sure you have a time to be always 
 > sit next to your computer as you have to type your password and press 
 > confirm for many many time on the installation.
@@ -68,6 +37,7 @@ sh setup.sh
 
 ```
 > the above command will do :
+
 1. change the working dir to `Home` 
 2. clone the code from the repo 
 3. change the working dir to `~/archlinux_my_config`
@@ -262,6 +232,8 @@ URxvt.iso14755_52: false
 
 ---
 
+
+
 ### ============ date 13 Apr 2022 
 > install `birdtray` 
 
@@ -276,6 +248,8 @@ URxvt.iso14755_52: false
 
 
 --- 
+
+
 ### =========== date 8 Aug 2022 =============================================
 
 > now my vim config could show status line with powerline 
@@ -294,13 +268,88 @@ URxvt.iso14755_52: false
 
 > go to `VIM2022` folder in `CONFIG_FILES`
 
+> copy the `.vimrc` and the folder `.vim` then paste it into your home folder
+
 > or use this command is simply as just : 
+
 > `cd ~/archlinux_my_config/CONFIG_FILES/VIM2022 && sh setup.sh`
 
 > now open your vim then type `:PlugInstall` or `:PlugUpdate` (well I don't 
+
 > know which one is work for you) 
+
 > I only have test this on my "VM" it is work very well so I don't think this 
-> will be a huge difficult for you 
+
+> will be a huge difficult for you.
+
+
+### ======= Video How to.
+
+> please click the image below to see `how to` the video is on bitchute.com
+
+> or you can copy and paste the below url to open in yor web browser
+
+> `https://www.bitchute.com/video/E6tywLPBxkqp/`
+
+
+
+
+
+
+
+
+[![my vimrc on aug 2022](https://i.ibb.co/1TZHXMg/copy-my-vim-config.png)](https://www.bitchute.com/video/E6tywLPBxkqp/ "")
+
+
+
+
+
+
+
+
+---
+
+
+## ========= date 5 aug 2022 ============
+
+> ***Copy chris's neovim config***
+
+
+> vim is my code editor for years now using vim you will learn new thing every day 
+
+
+> the nvim config copy from `git clone https://github.com/LunarVim/nvim-basic-ide.git` on the 6 Aug 2022
+
+
+> ***Extra keys i just added to this config out from chris's video ***
+
+> 
+
+```
+" multi cursor "
+select text then press Ctrl>n 
+
+" emmet "
+type html code such as 
+div then hold Ctrl<button> follow by press ,, you will get 
+
+<div></div>
+
+ or `ul>li*3>a` then hold Ctrl<button> follow by press ,, you will get 
+
+ <ul>
+   <li><a href=""></a></li>
+   <li><a href=""></a></li>
+   <li><a href=""></a></li>
+ </ul>
+
+
+```
+
+
+> on 5 aug 2022 this will make neovim look cool and easy to use.
+
+
 
 ---
 
