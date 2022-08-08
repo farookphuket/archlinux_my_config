@@ -275,6 +275,33 @@ URxvt.iso14755_52: false
 
 
 
+--- 
+### =========== date 8 Aug 2022 =============================================
+
+> now my vim config could show status line with powerline 
+
+> this is the first time I can set this SO EXCITE!!!
+
+
+[vim_powerline]:https://i.ibb.co/r5MbH5D/vim-powerline.png
+
+
+![vim powerline][vim_powerline]
+
+
+
+### config file like above 
+
+> go to `VIM2022` folder in `CONFIG_FILES`
+
+> or use this command is simply as just : 
+> `cd ~/archlinux_my_config/CONFIG_FILES/VIM2022 && sh setup.sh`
+
+> now open your vim then type `:PlugInstall` or `:PlugUpdate` (well I don't 
+> know which one is work for you) 
+> I only have test this on my "VM" it is work very well so I don't think this 
+> will be a huge difficult for you 
+
 ---
 
 ### ============ date 20 Jan 2022 
