@@ -41,6 +41,7 @@ set colorcolumn=80
 " | then hightlight it 80 characters
 highlight ColorColumn ctermbg=0 guibg=lightgrey	
 
+
 " | no backup file 
 set nobackup
 set nowritebackup
