@@ -1,7 +1,4 @@
-
 # A Basic Stable IDE config for Neovim
-
-> copy frommy laptop 7 aug 2022
 
 > Why does this repo exist?
 

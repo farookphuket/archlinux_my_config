@@ -212,7 +212,7 @@ sh $run_script_dir/web_browser.sh
 
 ### ============ date 5 july 2022 
 
-> I just find out that my "URXVT" cannot copy and past from clipboard 
+> I just find out that my "URXVT" cannot copy and paste from clipboard 
 > this is the very easy fix from `https://www.tomica.net/blog/2019/01/fixing-urxvt-copy-paste/` 
 > just edit the "~/.Xresources" file by add the following line.
 

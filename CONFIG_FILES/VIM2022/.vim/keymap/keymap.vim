@@ -3,21 +3,90 @@
 let mapleader = " "
 
 
-" fuzzy file 
+" =============================================================================
+" ===============                File START               =====================
+" =============================================================================
 nnoremap <Leader>f :Files<CR>
 
+" open Lexplore 
+nnoremap <leader>t :Ex<CR>
 
-nnoremap <leader>t :Lexplore<CR>
+" =============================================================================
+" ===============                File END                 =====================
+" =============================================================================
+
+
+
+
+" =============================================================================
+" ================              TAB START               =======================
+" =============================================================================
 
 " open new tab
 nnoremap <leader>tn :tabnew<CR>
-nnoremap <leader>tnn :tabnext<CR>
-nnoremap <leader>tpp :tabprevious<CR>
 
-" close buffer in tab
+" next tab
+nnoremap <leader><TAB>n :tabnext<CR>
+
+" previous tab
+nnoremap <leader><TAB>p :tabprevious<CR>
+
+" go to the first tab 
+nnoremap <leader><TAB>f :tabfirst<CR>
+
+" go to last tab 
+nnoremap <leader><TAB>l :tablast<CR>
+
+
+
+" =============================================================================
+" =================                  TAB END            =======================
+" =============================================================================
+
+
+" =============================================================================
+" =================                  BUFFER  START             ================
+" =============================================================================
+
+" go to next buffer 
+nnoremap <leader>bn :bnext<CR>
+
+" go to previous buffer 
+nnoremap <leader>bp :bprevious<CR>
+
+" go to first buffer 
+nnoremap <leader>bf :bfirst<CR>
+
+" go to last buffer 
+nnoremap <leader>bl :blast<CR>
+ 
+
+" close one buffer
 nnoremap <leader>c :bd!<CR>
 
-" list the buffer
+" save all and exit vim 
+nnoremap <leader>Q :xa<CR>
+
+" =============================================================================
+" =================                  BUFFER  END               ================
+" =============================================================================
+
+" =============================================================================
+" =================             SPLIT WINDOW START             ================
+" =============================================================================
+
+" press Spacebar| (pipe symbol) for vsplit
+nnoremap <leader>\| :vsplit<CR>
+
+" press Spacebar- (minus symbol) for split
+nnoremap <leader>- :split<CR>
+
+" =============================================================================
+" =================             SPLIT WINDOW END             ==================
+" =============================================================================
+
+
+" list the buffer all 
 nnoremap <leader>ll :ls<CR>
 
 " this key binding will not work if you don't have gvim install!
@@ -57,7 +126,7 @@ vnoremap J :m '>+1<CR>gv=gv
 
 
 nnoremap <leader>cr :CocRestart
-nnoremap <leader>ct :CocCommand explorer --toggle<CR>
+nnoremap <leader>e :CocCommand explorer --toggle<CR>
 
 " refresh source
 nnoremap <leader><CR> :so ~/.vimrc<CR>

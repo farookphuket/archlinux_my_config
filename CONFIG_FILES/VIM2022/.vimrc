@@ -9,6 +9,7 @@ source ~/.vim/setting/statusline.vim
 " on 8 aug 2022 cool statusline using powerline font
 
 
+
 source ~/.vim/setting/coc.vim
 
 source ~/.vim/keymap/keymap.vim
