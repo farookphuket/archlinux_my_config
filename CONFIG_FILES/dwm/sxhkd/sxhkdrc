@@ -25,6 +25,10 @@ super + F3
 super + F4
     google-chrome-stable  -no-default-browser-check
 
+# using vivaldi
+super + F5
+    vivaldi-stable  -no-default-browser-check
+
 super + F6 
     vlc
 
@@ -43,7 +47,7 @@ super + shift + b
 	blueman-manager
 
 super + m 
-    urxvt -e "cmus" ; sleep 5s ; cmus-remote -C "update-cache -f"
+    urxvt -e "cmus"; sleep 5s; cmus-remote -C "update-cache -f"
 
 super + x
     urxvt -e sh ~/.config/dwm/custom_script/exit.sh 
