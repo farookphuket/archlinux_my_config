@@ -42,6 +42,8 @@ super + shift + l
 super + d
 	rofi -show drun -theme sidebar
 
+super + r 
+    rofi-theme-selector
 
 super + shift + b
 	blueman-manager

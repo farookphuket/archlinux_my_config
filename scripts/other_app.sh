@@ -7,7 +7,7 @@ sudo pacman -S --needed --noconfirm inkscape rsync nautilus krusader picom
 
 sudo pacman -S --needed --noconfirm vlc thunderbird usbutils
 
-sudo pacman -S --needed --noconfirm arandr xsel
+sudo pacman -S --needed --noconfirm arandr xsel duf
 
 # last added 23 Apr 2022
 sudo pacman -S --needed --noconfirm sushi nautilus-image-converter
