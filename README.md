@@ -1,4 +1,6 @@
 # archlinux_my_config
+
+
 > my config for arch linux
 
 
@@ -12,6 +14,34 @@
 
 
 ---
+
+
+
+
+
+
+
+## my config on 24 Aug 2022 
+
+> just for arch linux DWM only!
+
+
+
+
+[arch_linux_my_config]:https://archive.org/download/arch_linux_myconfig_24-aug-2022_edit/arch_linux_myconfig_24-aug-2022_edit.png
+
+![my config][arch_linux_my_config]
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -164,7 +194,7 @@ sh $run_script_dir/4kslideshowmaker.sh
 
 # Install Arch Linux Farook's way
 
-> install arck linux is not easy but it is not either difficult so please 
+> install arch linux is not easy but it is not either difficult so please 
 > check this video! it's maybe can help you some.
 
 
@@ -230,6 +260,38 @@ sh $run_script_dir/4kslideshowmaker.sh
 ## Icon Theme
 
 ![icon theme][icon_theme]
+
+
+
+
+
+
+# ========= HP Printer Driver 24 Aug 2022 ============== 
+
+
+> I have been using linux since Ubuntu 7.04 but I have never use printer 
+> even one time so today (24 Aug 2022) is the first time ever for me to tried 
+> out the print feature ha ha...
+> I just install `cups` and `hplip` by run the command 
+
+> `sudo pacman -S cups` 
+
+> `yay -S hplip` 
+
+
+> now i can print the document from my hp 3830 printer
+
+
+
+[hp_printer]:https://archive.org/download/arch_linux_myconfig_24-aug-2022_edit/hp-3830_first-use.png
+
+
+![hp printer][hp_printer]
+
+
+
+
+
 
 
 
