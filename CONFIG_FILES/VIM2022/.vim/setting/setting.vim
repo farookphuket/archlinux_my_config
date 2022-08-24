@@ -144,5 +144,11 @@ let g:user_emmet_leader_key=','
  
 " colorscheme habamax
 " I am so in love with the yellow color in vim so crazy beautiful!!!
-colorscheme murphy
-" colorscheme jellybeans 
+"colorscheme murphy
+colorscheme jellybeans 
+
+
+
+
+autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
