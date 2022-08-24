@@ -1,4 +1,3 @@
-
 # archlinux_my_config
 > my config for arch linux
 
@@ -164,12 +163,20 @@ sh $run_script_dir/4kslideshowmaker.sh
 
 
 # Install Arch Linux Farook's way
+
 > install arck linux is not easy but it is not either difficult so please 
 > check this video! it's maybe can help you some.
-> good luck
 
 
-[![watch how to install arch linux on laptop](http://img.youtube.com/vi/yD3ub-qQGZY/0.jpg)](http://www.youtube.com/watch?v=yD3ub-qQGZY "")
+
+## are you ready?
+
+> want to watch the video "how to install arch linux farook's way" just click the below image! 
+
+
+
+
+[![watch how to install arch linux on laptop](https://archive.org/download/arch_linux_myconfig_24-aug-2022_edit/arch_linux_myconfig_24-aug-2022_edit.png)](http://www.youtube.com/watch?v=yD3ub-qQGZY "")
 
 
 
