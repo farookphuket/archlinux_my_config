@@ -18,6 +18,7 @@ sh $run_script_dir/code_editor.sh
 sh $run_script_dir/download_tools.sh 
 
 
+# gimp is a photo editor like photoshop 
 #sh $run_script_dir/gimp.sh 
 
 sh $run_script_dir/gnome_app.sh 
@@ -26,10 +27,12 @@ sh $run_script_dir/iso_image_writer.sh
 
 sh $run_script_dir/kde_app.sh 
 
+# the office suit program
 sh $run_script_dir/libre_office.sh 
 
 sh $run_script_dir/media_player_app.sh 
 
+# screen capture program
 sh $run_script_dir/screen_capture.sh
 
 #sh $run_script_dir/shutter.sh 
@@ -40,22 +43,28 @@ sh $run_script_dir/screen_capture.sh
 
 sh $run_script_dir/xfce4_app.sh 
 
+# the taskbar icon
 sh $run_script_dir/applet.sh
 
+# setup font for better Thai(and other like Chinese) Language support
 sh $run_script_dir/font_install.sh
 
 #sh $run_script_dir/sound_video_editor.sh
 
+# this script will install the other program
 sh $run_script_dir/other_app.sh
 
 # photofilmstrip is has Error from python script 
 # 1 Mar 2022
 # sh $run_script_dir/photofilmstrip.sh
 
-# to make photo slideshow asa video
+# to make photo slideshow as video
 sh $run_script_dir/4kslideshowmaker.sh
 
-sh $run_script_dir/web_browser.sh
+# the web browser to install all web browser I use is take too much time
+# remove # sign from the below line if you want to install
+#sh $run_script_dir/web_browser.sh
+
 
 # install puddletag on 09 Jan 2022
 #sh $run_script_dir/puddletag.sh

@@ -1,3 +1,4 @@
+
 # archlinux_my_config
 > my config for arch linux
 
@@ -5,7 +6,7 @@
 
 
 > I just start to using Arch Linux on 10 Nov 2021 
-
+> up until now 24 Aug 2022 I am admit that Arch linux is my favour Linux that I will love to use.
 
 
 
@@ -17,11 +18,15 @@
 
 
 
-# Warning!!
+# Warning this config for arch linux DWM ONLY!! 
+
+> this is all just my config when I using arch linux and I am using DWM only
 
 > before you run the command make sure you have a time to be always 
 > sit next to your computer as you have to type your password and press 
-> confirm for many many time on the installation.
+> confirm for many many(at least 10 times) time on the installation so please pay attention of what you're doing.
+
+
 
 
 
@@ -58,7 +63,11 @@ sh setup.sh
 
 > this code will install all the program that I(Farook) using it in my real life 
 work the install time will be really depending up on your internet speed it is 
-3 hours 30 mins. on my every test.
+3 hours 30 mins. on my every test .
+
+> so on the 24 Aug 2022 I just comment the install app program just to hopfully
+> the script will be take a little bit shroter setup time
+
 > make sure you really want to run this or you better of to view the file  
 `scripts/call_script.sh` to just select the program you want to install and use 
 before you run the `setup` script which will take too much time.
@@ -66,16 +75,15 @@ before you run the `setup` script which will take too much time.
 > you can just feel free to comment by put `#` in front the `sh` command line 
 > if any of the program you will not use it
 
-> the file `scripts/call_script.sh` content on 19 Nov 2021 :
+> the file `scripts/call_script.sh` content on 24 Aug 2022 :
 
 ```
-
 #!/bin/bash
 
 
 
 # this script will call another script 
-
+# edit this file by add "#" infront of any propgramyou do not want to install
 
 run_script_dir=~/archlinux_my_config/scripts
 
@@ -90,7 +98,8 @@ sh $run_script_dir/code_editor.sh
 sh $run_script_dir/download_tools.sh 
 
 
-sh $run_script_dir/gimp.sh 
+# gimp is a photo editor like photoshop 
+#sh $run_script_dir/gimp.sh 
 
 sh $run_script_dir/gnome_app.sh 
 
@@ -98,29 +107,52 @@ sh $run_script_dir/iso_image_writer.sh
 
 sh $run_script_dir/kde_app.sh 
 
+# the office suit program
 sh $run_script_dir/libre_office.sh 
 
 sh $run_script_dir/media_player_app.sh 
 
+# screen capture program
 sh $run_script_dir/screen_capture.sh
 
-sh $run_script_dir/shutter.sh 
+#sh $run_script_dir/shutter.sh 
 
-sh $run_script_dir/virt-manager.sh 
+#sh $run_script_dir/virt-manager.sh 
 
-sh $run_script_dir/virtualbox.sh 
+#sh $run_script_dir/virtualbox.sh 
 
 sh $run_script_dir/xfce4_app.sh 
 
+# the taskbar icon
 sh $run_script_dir/applet.sh
 
+# setup font for better Thai(and other like Chinese) Language support
 sh $run_script_dir/font_install.sh
 
-sh $run_script_dir/sound_video_editor.sh
+#sh $run_script_dir/sound_video_editor.sh
 
+# this script will install the other program
 sh $run_script_dir/other_app.sh
 
-sh $run_script_dir/web_browser.sh
+# photofilmstrip is has Error from python script 
+# 1 Mar 2022
+# sh $run_script_dir/photofilmstrip.sh
+
+# to make photo slideshow as video
+sh $run_script_dir/4kslideshowmaker.sh
+
+# the web browser to install all web browser I use is take too much time
+# remove # sign from the below line if you want to install
+#sh $run_script_dir/web_browser.sh
+
+
+# install puddletag on 09 Jan 2022
+#sh $run_script_dir/puddletag.sh
+
+# nvidia driver for nvidia graphic card
+#sh $run_script_dir/nvidia-driver.sh
+
+
 
 
 
@@ -257,7 +289,7 @@ URxvt.iso14755_52: false
 > this is the first time I can set this SO EXCITE!!!
 
 
-[vim_powerline]:https://i.ibb.co/r5MbH5D/vim-powerline.png
+[vim_powerline]:https://i.ibb.co/HGYNqG5/vim-powerline.png
 
 
 ![vim powerline][vim_powerline]
@@ -298,7 +330,7 @@ URxvt.iso14755_52: false
 
 
 
-[![my vimrc on aug 2022](https://i.ibb.co/1TZHXMg/copy-my-vim-config.png)](https://www.bitchute.com/video/E6tywLPBxkqp/ "")
+[![my vimrc on aug 2022](https://i.ibb.co/HGYNqG5/vim-powerline.png)](https://www.bitchute.com/video/E6tywLPBxkqp/ "")
 
 
 
@@ -433,13 +465,13 @@ cannot install grub make sure you have correct when you type the command.
 > but for now the use is 
 
 - left click by tab 1 finger will act like do left click
-- right click by tab 3 fingers will show the right click menu
+- right click by tab 2 fingers will show the right click menu
 
 
 ### ============= setup bluetooth 
 > just follow this tutorial here.
 > `https://www.jeremymorgan.com/tutorials/linux/how-to-bluetooth-arch-linux/` 
-> but until now I still cannot make my bluetooth device auto start I don't why?
+
 
 
 
