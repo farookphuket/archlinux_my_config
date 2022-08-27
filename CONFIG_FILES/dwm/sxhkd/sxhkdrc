@@ -1,17 +1,26 @@
 #super + Return
-	#alacritty --working-directory ~/
+#	alacritty --working-directory ~/
 
 
 # I like to use konsole as my favorite terminal
 super + Return
 	konsole --workdir ~/
 
-# added 16 Feb 2022 show rofi like pop-os
+
+# open rofi like pop-os
 super + slash
-    rofi modi -show drun -theme fancy.rasi
+    xfce4-appfinder --collapsed
+    # change this on 12 Aug 2022
+    #rofi modi -show drun -theme fancy.rasi
+
+
+# show theme selector 
+super + r 
+    rofi-theme-selector
+
 
 super + shift + Return
-    urxvt -e "ranger" 
+    urxvt -e ranger ~/ 
 
 super + F1
     brave 
@@ -25,9 +34,8 @@ super + F3
 super + F4
     google-chrome-stable  -no-default-browser-check
 
-# using vivaldi
-super + F5
-    vivaldi-stable  -no-default-browser-check
+super + F5 
+    vivaldi-stable -no-default-browser-check
 
 super + F6 
     vlc
@@ -40,19 +48,21 @@ super + shift + l
     blurlock
 
 super + d
-	rofi -show drun -theme sidebar
+	rofi -show drun -theme fancy
+	#rofi -show drun -theme sidebar
 
-super + r 
-    rofi-theme-selector
 
 super + shift + b
 	blueman-manager
 
 super + m 
-    urxvt -e "cmus"; sleep 5s; cmus-remote -C "update-cache -f"
+    urxvt -e "cmus" ; sleep 5s ; cmus-remote -C "update-cache -f"
 
 super + x
-    urxvt -e sh ~/.config/dwm/custom_script/exit.sh 
+    urxvt -e python /usr/share/archlinux-logout/archlinux-logout.py
+    # urxvt -e sh ~/.config/dwm/scripts/archlinux-logout.sh    
+    #urxvt -e sh ~/.config/dwm/custom_script/exit.sh 
+
 
 super + v
    pavucontrol 
@@ -60,6 +70,10 @@ super + v
 Print 
     spectacle
 
+
+# restart keyboard
+super + alt 
+    ~/.config/dwm/custom_script/set_kb.sh
 
 #Picom Toggle
 ctrl + alt + o

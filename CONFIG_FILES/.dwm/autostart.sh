@@ -21,8 +21,9 @@ run "xfce4-power-manager"
 
 run "picom"
 
-# 13 Apr 2022
 run "birdtray"
+
+run "knotes"
 
 run "/usr/lib/xfce4/notifyd/xfce4-notifyd"
 
@@ -38,6 +39,11 @@ feh --bg-fill --randomize ~/Pictures/wallpapers/* &
 run slstatus & 
 run ~/.config/dwm/custom_script/set_kb.sh &
 
-run ~/.config/dwm/custom_script/set_vm_screen.sh &
+#run ~/.config/dwm/custom_script/set_vm_screen.sh &
 
 sxhkd -c ~/.config/dwm/sxhkd/sxhkdrc &
+
+
+# for my laptop Asus last update 25 Aug 2022 only 
+# please check the file ~/.config/dwm/scripts/2screens.sh
+run ~/.config/dwm/scripts/2screens.sh &

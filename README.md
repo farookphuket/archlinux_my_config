@@ -3,9 +3,6 @@
 
 > my config for arch linux
 
-
-
-
 > I just start to using Arch Linux on 10 Nov 2021 
 > up until now 24 Aug 2022 I am admit that Arch linux is my favour Linux that I will love to use.
 
@@ -300,9 +297,37 @@ sh $run_script_dir/4kslideshowmaker.sh
 > Atom will be no longer support on Dec 2022 so I have remove Atom from the 
 > installation.
 
+
+
+
 # Report 
 
+
+---
+
+### ============ date 27 Aug 2022 
+
+> added AstroNvim today after try to use it for a few moment 
+> the AstroNvim is so cool! this is the easiest with 0 config for neovim 
+> as to make it look like vscode this is very cool now. 
+
+> visit here `<a href="https://github.com/AstroNvim/AstroNvim" target="_blank">AstroNvim</a>`
+
 --- 
+
+
+### ============ date 24 Aug 2022 
+
+> fix vivaldi cannot play video is simple as 
+
+> `sudo /opt/vivaldi/update-ffmpeg`
+
+> copy the command from "https://forum.vivaldi.net/topic/42273/solved-html5-codecs-again/3"
+
+
+
+
+
 
 ### ============ date 7 Jul 2022  
 
