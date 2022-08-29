@@ -59,7 +59,8 @@ super + m
     urxvt -e "cmus" ; sleep 5s ; cmus-remote -C "update-cache -f"
 
 super + x
-    urxvt -e python /usr/share/archlinux-logout/archlinux-logout.py
+		sh -c "~/.config/dwm/custom_script/stop.sh"
+    #urxvt -e python /usr/share/archlinux-logout/archlinux-logout.py
     # urxvt -e sh ~/.config/dwm/scripts/archlinux-logout.sh    
     #urxvt -e sh ~/.config/dwm/custom_script/exit.sh 
 

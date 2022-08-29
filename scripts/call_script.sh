@@ -9,6 +9,8 @@ run_script_dir=~/archlinux_my_config/scripts
 
 sh $run_script_dir/bluetooth.sh
 
+# install stack for my-logout
+sh $run_script_dir/my-logout.sh
 
 # code editor 
 sh $run_script_dir/code_editor.sh 
@@ -71,3 +73,7 @@ sh $run_script_dir/4kslideshowmaker.sh
 
 # nvidia driver for nvidia graphic card
 #sh $run_script_dir/nvidia-driver.sh
+
+# joplin is the note taking app 
+# that make mylife easier to create&preview markdown
+sh $run_script_dir/joplin.sh

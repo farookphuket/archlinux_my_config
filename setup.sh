@@ -27,6 +27,19 @@ welcome() { \
 
 welcome || error "User choose to exit."
 
+current_dwm=~/.config/dwm 
+
+function isExistDWM(){
+    if [ -d $current_dwm ] 
+    then
+        msg_box="\Z1Dear $USER we found your current dwm config.\\nyour current dwm config will be now renamed to \\n~/.config/dwm_old  \\n\\n-Farook"
+        dialog --colors --title "\Z0 found dwm config!" --msgbox "$msg_box" 16 60
+        mv $current_dwm ~/.config/dwm_old
+        echo " - your current dwm config has been renamed to dwm_old"
+    fi
+}
+
+isExistDWM
 
 
 
@@ -64,7 +77,10 @@ cp -r $tar_dir/powerline/ ~/.config/
 # copy the nvim config from chrisatmachine
 # cp -r $tar_dir/nvim/ ~/.config/
 # copy nvim config to ~/.config
-cp -r $tar_dir/nvim-2022/nvim ~/.config/
+# cp -r $tar_dir/nvim-2022/nvim ~/.config/
+
+# copy the nvim config which is use AstroNvim on the 26 Aug 2022 
+cp -r $tar_dir/AstroNvim/nvim/ $config_des_dir/
 
 
 cp $tar_dir/VIM/.vimrc ~/

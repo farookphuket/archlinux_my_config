@@ -263,7 +263,7 @@ sh $run_script_dir/4kslideshowmaker.sh
 
 
 
-# ========= HP Printer Driver 24 Aug 2022 ============== 
+# ===== HP Printer Driver 24 Aug 2022 ========= 
 
 
 > I have been using linux since Ubuntu 7.04 but I have never use printer 
@@ -311,7 +311,7 @@ sh $run_script_dir/4kslideshowmaker.sh
 > the AstroNvim is so cool! this is the easiest with 0 config for neovim 
 > as to make it look like vscode this is very cool now. 
 
-> visit here `<a href="https://github.com/AstroNvim/AstroNvim" target="_blank">AstroNvim</a>`
+> visit here `https://github.com/AstroNvim/AstroNvim`
 
 --- 
 
