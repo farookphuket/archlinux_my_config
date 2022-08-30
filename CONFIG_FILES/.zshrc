@@ -48,6 +48,7 @@ alias la='ls -A'
 alias l='ls -CF'
 alias cl='clear'
 alias vi="nvim ."
+alias vv="vim -c 'Lexplore'"
 
 # =========== For Debian ,Ubuntu
 #alias nnet="cd /var/www/html; nautilus ."

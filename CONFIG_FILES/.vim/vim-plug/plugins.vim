@@ -54,6 +54,8 @@ Plug '/home/mpaulson/personal/vim-be-good'
 
 
 
+" color highlight
+Plug 'chrisbra/Colorizer'
 
 " from my previos .vimrc
 " hit gc to comment
