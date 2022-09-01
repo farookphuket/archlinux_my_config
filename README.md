@@ -1,3 +1,4 @@
+
 # archlinux_my_config
 
 
@@ -7,8 +8,10 @@
 > up until now 24 Aug 2022 I am admit that Arch linux is my favour Linux that I will love to use.
 
 
+<!-- var image define -->
 
-
+<!-- plugin update for vim -->
+[tailwind_plug]:https://archive.org/download/arch_linux_myconfig_24-aug-2022_edit/tailwindcss_1-sep-2022.png
 
 ---
 
@@ -301,6 +304,14 @@ sh $run_script_dir/4kslideshowmaker.sh
 
 
 # Report 
+
+
+
+### ============ date 1 Sep 2022 vim plug
+> `server-tailwincss` for an easier tailwind
+
+
+![tailwind plugin][tailwind_plug]
 
 
 ---
