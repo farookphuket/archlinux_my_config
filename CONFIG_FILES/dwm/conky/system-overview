@@ -127,7 +127,7 @@ ${color1}${alignc}S Y S T E M    I N F O${color}
 ${color1}${hr}${color}
 ${color1}Host:${alignr}${color2}${nodename}${color}
 ${color1}OS:${alignr}${color2}${sysname}${color}
-${color1}Loged in:${alignr}${color2}${user_names}${color}
+# ${color1}Loged in:${alignr}${color2}${user_names}${color}
 ${color1}Kernel:${color2}${alignr}$kernel${color}
 ${color1}Uptime:${color2}${alignr}${uptime}${color}
 #${color1}UTC:${color2}${alignr}${utime %H:%M}${color}
