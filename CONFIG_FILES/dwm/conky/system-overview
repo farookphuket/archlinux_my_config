@@ -31,12 +31,13 @@ conky.config = {
 
 	alignment = 'bottom_right',					-- top-left,top-middle,top-right,bottom-left,bottom-middle,bottom-right,
 												-- middle-left,middle-middle,middle-right,none
-	--Arch Duoscreen
-	gap_x = -1910,                              -- only if you have 2 screens this will show at the right of your second screen
+	-- Arch Duoscreen 
+	-- last update 4 June 2023
+	-- use 2 screen the second screen align right of laptop monitor 
+	gap_x = -1910,
 
     -- if you only have 1 screen make sure you put -- to the gap_x = -1910 then remove -- out from the below line at --gap_x = 10
-	--gap_x = 10,									-- pixels between right or left border
-
+--	gap_x = 10,									-- pixels between right or left border
 	gap_y = 10,									-- pixels between bottom or left border
 	minimum_height = 200,						-- minimum height of window
 	minimum_width = 280,						-- minimum height of window
@@ -127,7 +128,7 @@ ${color1}${alignc}S Y S T E M    I N F O${color}
 ${color1}${hr}${color}
 ${color1}Host:${alignr}${color2}${nodename}${color}
 ${color1}OS:${alignr}${color2}${sysname}${color}
-# ${color1}Loged in:${alignr}${color2}${user_names}${color}
+#${color1}Loged in:${alignr}${color2}${user_names}${color}
 ${color1}Kernel:${color2}${alignr}$kernel${color}
 ${color1}Uptime:${color2}${alignr}${uptime}${color}
 #${color1}UTC:${color2}${alignr}${utime %H:%M}${color}
