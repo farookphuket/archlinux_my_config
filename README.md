@@ -8,6 +8,16 @@
 > up until now 24 Aug 2022 I am admit that Arch linux is my favour Linux that I will love to use.
 
 
+
+
+
+# my last update 
+
+## update on 28 Feb 2024 
+> due to the error from my tmux config file so I copy the new tmux config file from 
+> `# https://hamvocke.com/blog/a-guide-to-customizing-your-tmux-conf/`
+> and make a small change to suit my need 
+
 <!-- var image define -->
 
 <!-- plugin update for vim -->
