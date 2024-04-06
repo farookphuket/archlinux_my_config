@@ -35,6 +35,7 @@ fi
 sudo cp $target_dir/httpd.conf /etc/httpd/conf/
 
 
+# ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPxSMzKtJNurBvohyodxooHMB+ghQHzSoSlYd+z7alrO farookphuket@gmail.com
 
 if [[ -f /etc/php/php.ini ]]; then
     sudo cp /etc/php/php.ini $BACKUP_PATH/php.ini.old_$TODAY

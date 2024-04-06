@@ -13,6 +13,9 @@
 
 # my last update 
 
+## last use 6 Apr 2024 
+> install lamp server in arch linux is still work fine.
+
 ## update on 28 Feb 2024 
 > due to the error from my tmux config file so I copy the new tmux config file from 
 > `# https://hamvocke.com/blog/a-guide-to-customizing-your-tmux-conf/`
