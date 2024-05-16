@@ -13,7 +13,7 @@ fi
 
 # gvim will be conflick with vim so you have to remove vim 
 
-sudo pacman -S --needed gvim 
+sudo pacman -S --needed --noconfirm gvim helix
 
 # atom will be no longer support on the end of Dec. 2022
 sudo pacman -S --needed --noconfirm tmux neovim powerline code  

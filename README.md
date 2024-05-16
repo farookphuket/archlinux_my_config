@@ -15,6 +15,11 @@
 
 ## last use 6 Apr 2024 
 > install lamp server in arch linux is still work fine.
+> copy nvim config from `src/neovim-lazy-ide-2024/.config/nvim/lua/plugins` 
+> `https://github.com/agalea91/zazencodes-youtube/tree/main/src/neovim-lazy-ide-2024/.config/nvim/lua/plugins`
+
+create new folder in `.config` 
+    nvim/lua/plugins/
 
 ## update on 28 Feb 2024 
 > due to the error from my tmux config file so I copy the new tmux config file from 
