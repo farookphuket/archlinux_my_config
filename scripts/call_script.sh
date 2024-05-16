@@ -16,6 +16,9 @@ sh $run_script_dir/my-logout.sh
 sh $run_script_dir/code_editor.sh 
 
 
+# partition tools and file system 
+sh $run_script_dir/partition_file_tools.sh 
+
 # download_tools.sh 
 sh $run_script_dir/download_tools.sh 
 

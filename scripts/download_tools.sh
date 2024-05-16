@@ -9,5 +9,5 @@ then
 fi
 
 # install youtube-dl 
-sudo  pacman -S --needed --noconfirm youtube-dl rsync
+sudo  pacman -S --needed --noconfirm rsync
 
