@@ -1,9 +1,10 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+
+#if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+#fi
 
 # Use powerline
 USE_POWERLINE="true"
@@ -22,8 +23,8 @@ fi
 # =============== color autosuggestions
 # copy this code from https://github.com/zsh-users/zsh-autosuggestions
 # on 28 May 2021
-
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=white,bg=black,bold,underline"
+
 
 # ================ END 28 May 2021 ===========================================
 
@@ -43,7 +44,7 @@ bindkey '^X^X' history-beginning-search-menu
 
 
 
-alias ll='ls -la'
+alias ll='ls -lh'
 alias la='ls -A'
 alias l='ls -CF'
 alias cl='clear'
@@ -90,6 +91,6 @@ set -o vi
 export EDITOR=/usr/bin/code-oss
 
 # To customize prompt, run `p10k configure` or edit /usr/share/zsh/p10k.zsh.
-[[ ! -f /usr/share/zsh/p10k.zsh ]] || source /usr/share/zsh/p10k.zsh
+# [[ ! -f /usr/share/zsh/p10k.zsh ]] || source /usr/share/zsh/p10k.zsh
 
-typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+# typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
