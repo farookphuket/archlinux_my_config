@@ -5,13 +5,24 @@
 > my config for arch linux
 
 > I just start to using Arch Linux on 10 Nov 2021 
-> up until now 24 Aug 2022 I am admit that Arch linux is my favour Linux that I will love to use.
+> up until now 26 May 2024 I am admit that Arch linux is my favour Linux that I will love to use.
 
 
 
 
 
 # my last update 
+
+## added PostMan for test the laravel 11 on 26 May 2024
+> the script name web_dev_tools.sh 
+
+[postman_1_img]:https://ia601401.us.archive.org/7/items/arch_linux_myconfig_24-aug-2022_edit/postman_img_1.png
+![PostMan][postman_1_img]
+
+
+
+
+
 
 ## last use 6 Apr 2024 
 > install lamp server in arch linux is still work fine.
