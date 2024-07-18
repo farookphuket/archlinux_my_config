@@ -13,6 +13,16 @@
 
 # my last update 
 
+
+## install nerd-fonts 18 Jul 2024 
+> by run `sudo pacman -S nerd-fonts` so it's give the nvim look nicer.
+
+[nvim_18-jul-2024]:https://ia601401.us.archive.org/7/items/arch_linux_myconfig_24-aug-2022_edit/nvim_18-jul-2024.png
+![Nv][nvim_18-jul-2024]
+
+
+
+
 ## added PostMan for test the laravel 11 on 26 May 2024
 > the script name web_dev_tools.sh 
 
