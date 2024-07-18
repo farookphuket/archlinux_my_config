@@ -16,6 +16,16 @@
 
 ## install nerd-fonts 18 Jul 2024 
 > by run `sudo pacman -S nerd-fonts` so it's give the nvim look nicer.
+> setup neo vim copy the config from Lazyvim to use this config run
+
+```
+## remove the old config
+ rm -rf ~/.config/nvim/
+## copy the config nvim folder to ~/.config/
+cp -r nvim_use_19-jul-2024 ~/.config/nvim/
+```
+
+
 
 [nvim_18-jul-2024]:https://ia601401.us.archive.org/7/items/arch_linux_myconfig_24-aug-2022_edit/nvim_18-jul-2024.png
 ![Nv][nvim_18-jul-2024]
