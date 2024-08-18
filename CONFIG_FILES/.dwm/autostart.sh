@@ -1,13 +1,10 @@
 #!/bin/bash
 
-
-function run(){
-	if ! pgrep $1 ;
-	then
-		$@&
+function run() {
+	if ! pgrep $1; then
+		$@ &
 	fi
 }
-
 
 run "pa-applet"
 
@@ -35,15 +32,15 @@ run "conky -c $HOME/.config/dwm/conky/system-overview"
 
 feh --bg-fill --randomize ~/Pictures/wallpapers/* &
 
-
-run slstatus & 
+run slstatus &
 run ~/.config/dwm/custom_script/set_kb.sh &
 
 #run ~/.config/dwm/custom_script/set_vm_screen.sh &
 
 sxhkd -c ~/.config/dwm/sxhkd/sxhkdrc &
 
-
-# for my laptop Asus last update 25 Aug 2022 only 
+# for my laptop Asus last update 25 Aug 2022 only
 # please check the file ~/.config/dwm/scripts/2screens.sh
-run ~/.config/dwm/scripts/2screens.sh &
+# run ~/.config/dwm/scripts/2screens.sh &
+
+run ~/.config/dwm/scripts/2left_screens.sh &

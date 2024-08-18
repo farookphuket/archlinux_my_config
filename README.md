@@ -1,4 +1,3 @@
-
 # archlinux_my_config
 
 
@@ -10,9 +9,13 @@
 
 
 
-
 # my last update 
 
+## change script for second left screen 
+> the file is `system-overview` for conky `autostart.sh` for .dwm 
+> `2left_screens.sh` for the display 
+
+---
 
 ## install nerd-fonts 18 Jul 2024 
 > by run `sudo pacman -S nerd-fonts` so it's give the nvim look nicer.
