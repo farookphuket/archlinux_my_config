@@ -4,8 +4,7 @@
 
 # I like to use konsole as my favorite terminal
 super + Return
-#	konsole --workdir ~/
-	xfce4-terminal --default-working-directory=~/
+	konsole --workdir ~/
 
 
 # open rofi like pop-os
@@ -49,10 +48,8 @@ super + shift + l
     blurlock
 
 super + d
-#	rofi -show drun -theme fancy
-#	rofi -show drun -theme sidebar
-#	rofi -show drun -theme dmenu
-	rofi -show drun -theme arthur
+	rofi -show drun -theme fancy
+	#rofi -show drun -theme sidebar
 
 
 super + shift + b
@@ -82,17 +79,3 @@ super + alt
 #Picom Toggle
 ctrl + alt + o
     ~/.config/dwm/scripts/picom-toggle.sh
-
-# thunar file manager 10 Apr 2024
-super + t 
-  thunar ~/
-
-# open yazi 
-super + shift +f 
-  alacritty -e yazi ~/Downloads
-
-# open terminal in sudo mode
-super + shift + t
-	sudo xfce4-terminal --default-working-directory=/
-
-

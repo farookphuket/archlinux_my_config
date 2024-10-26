@@ -17,6 +17,10 @@
 
 ---
 
+## 26 Oct 2024 
+> install yazi file manager and update the alacritty.config to fix 
+> font problem
+
 ## install nerd-fonts 18 Jul 2024 
 > by run `sudo pacman -S nerd-fonts` so it's give the nvim look nicer.
 > setup neo vim copy the config from Lazyvim to use this config run
