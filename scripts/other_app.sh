@@ -1,23 +1,23 @@
 #!/bin/bash
 
-sudo pacman -S --needed --noconfirm tree htop feh nitrogen rofi sxhkd conky
-sudo pacman -S --needed --noconfirm inkscape rsync nautilus krusader picom
+sudo pacman -Syu --needed --noconfirm tree htop feh nitrogen rofi sxhkd conky
+sudo pacman -Syu --needed --noconfirm inkscape rsync nautilus krusader picom
 
-sudo pacman -S --needed --noconfirm vlc thunderbird usbutils
+sudo pacman -Syu --needed --noconfirm vlc thunderbird usbutils
 
-sudo pacman -S --needed --noconfirm arandr xsel duf
+sudo pacman -Syu --needed --noconfirm arandr xsel duf
 
 # last added 23 Apr 2022
-sudo pacman -S --needed --noconfirm sushi nautilus-image-converter
+sudo pacman -Syu --needed --noconfirm sushi nautilus-image-converter
 
 # fake background webcam and webcam program 25 Jul 2022
 #sudo yay -S fswebcam fake-background-webcam-git
 
 # screen zoom in 10 Feb 2022
-sudo pacman -S --needed --noconfirm kmag
+sudo pacman -Syu --needed --noconfirm kmag
 
 # cmatrix in 28 Oct 2024
-sudo pacman -S --needed --noconfirm cmatrix
+sudo pacman -Syu --needed --noconfirm cmatrix
 
 # 15 Jan 2022 i3exit install
 pushd ~/

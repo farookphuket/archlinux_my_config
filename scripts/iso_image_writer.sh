@@ -1,7 +1,5 @@
-#!/bin/bash 
+#!/bin/bash
 
+# sudo pacman -S --needed --noconfirm imagewriter
 
-
-# sudo pacman -S --needed --noconfirm imagewriter 
-
-yay -S imagewriter
+yay -Syu imagewriter --needed --noconfirm

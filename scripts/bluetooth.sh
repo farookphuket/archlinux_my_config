@@ -1,17 +1,12 @@
-#!/bin/bash 
+#!/bin/bash
 
-
-sudo pacman -S pavucontrol pulseaudio-bluetooth pulseaudio  
+sudo pacman -Syu pavucontrol pulseaudio-bluetooth pulseaudio --needed --noconfirm
 
 sudo systemctl start pulseaudio
 
+yay -Sy pa-applet-git pamixer-git --needed --noconfirm
 
-
-yay -S pa-applet-git pamixer-git
-
-sudo pacman -S --needed blueberry blueman bluez-utils bluez bluez-tools
+sudo pacman -Syu blueberry blueman bluez-utils bluez bluez-tools --needed --noconfirm
 
 sudo systemctl start bluetooth.service
 sudo systemctl enable bluetooth.service
-
-

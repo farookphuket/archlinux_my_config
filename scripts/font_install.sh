@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # noto font
-sudo pacman -S --needed --noconfirm noto-fonts noto-fonts-extra nerd-fonts
+sudo pacman -Sy --needed --noconfirm noto-fonts noto-fonts-extra nerd-fonts
 
 # more font
-yay -S urxvt-resize-font-git ttf-ubuntu-font-family otf-font-awesome ttf-font-awesome ttf-ms-fonts
+yay -Syu urxvt-resize-font-git ttf-ubuntu-font-family otf-font-awesome ttf-font-awesome ttf-ms-fonts --needed --noconfirm
 
 pushd ~/
 
@@ -32,7 +32,7 @@ sleep 5s
 my_font=~/my_fonts
 
 if [ -d "$my_font" ]; then
-	sudo rm -rf $my_font
+  sudo rm -rf $my_font
 fi
 
 # sudo pacman -S --needed --noconfirm dialog

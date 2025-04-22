@@ -1,4 +1,3 @@
-#!/bin/bash 
+#!/bin/bash
 
-
-sudo pacman -S --needed --noconfirm nvidia nvidia-settings 
+sudo pacman -Sy --needed --noconfirm nvidia nvidia-settings

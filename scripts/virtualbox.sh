@@ -1,12 +1,8 @@
-#!/bin/bash 
+#!/bin/bash
 
+# install virtualbox
+sudo pacman -S virtualbox --needed --noconfirm
 
-
-# install virtualbox 
-sudo pacman -S virtualbox --needed 
-
-
-sleep 5s 
+sleep 5s
 
 modprobe vboxdrv
-

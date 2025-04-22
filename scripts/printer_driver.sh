@@ -5,7 +5,7 @@ echo " please wait...."
 echo " ======================================================================"
 
 # Install cups for arch linux
-sudo pacman -S cups system-config-printer cups-browsed --needed --noconfirm
+sudo pacman -Syu cups system-config-printer cups-browsed --needed --noconfirm
 sudo pacman -Sy bluez-cups --needed --noconfirm
 
 # start deamon  after install
