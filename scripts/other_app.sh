@@ -1,11 +1,8 @@
 #!/bin/bash
 
-sudo pacman -Syu --needed --noconfirm tree htop feh nitrogen rofi sxhkd conky
-sudo pacman -Syu --needed --noconfirm inkscape rsync nautilus krusader picom
+sudo pacman -Syu --needed --noconfirm inkscape
 
-sudo pacman -Syu --needed --noconfirm vlc thunderbird usbutils
-
-sudo pacman -Syu --needed --noconfirm arandr xsel duf
+sudo pacman -Syu --needed --noconfirm vlc thunderbird
 
 # last added 23 Apr 2022
 sudo pacman -Syu --needed --noconfirm sushi nautilus-image-converter
@@ -16,24 +13,6 @@ sudo pacman -Syu --needed --noconfirm sushi nautilus-image-converter
 # screen zoom in 10 Feb 2022
 sudo pacman -Syu --needed --noconfirm kmag
 
-# cmatrix in 28 Oct 2024
-sudo pacman -Syu --needed --noconfirm cmatrix
-
-# 15 Jan 2022 i3exit install
-pushd ~/
-git clone https://aur.archlinux.org/i3exit.git
-cd ~/i3exit
-makepkg -si
-
-sleep 5s
-rm -rf ~/i3exit
-
 popd
 
 #sleep 5s
-
-# =============================================================================
-# the folder `.dwm` is will call by `dwm` script for the auto load program like
-# slstatus(to draw the status line) nitrogen(draw wall paper) etc,
-# copy config folder
-cp -r ~/archlinux_my_config/CONFIG_FILES/.dwm/ ~/
