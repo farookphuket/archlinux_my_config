@@ -51,14 +51,6 @@ cp -r $tar_dir/VIM/.vim ~/
 cp -r $tar_dir/ranger/ ~/.config/
 cp -r $tar_dir/powerline/ ~/.config/
 
-# copy the nvim config from chrisatmachine
-# cp -r $tar_dir/nvim/ ~/.config/
-# copy nvim config to ~/.config
-# cp -r $tar_dir/nvim-2022/nvim ~/.config/
-
-# copy the nvim config which is use AstroNvim on the 26 Aug 2022
-# cp -r $tar_dir/AstroNvim/nvim/ $config_des_dir/
-
 cp $tar_dir/VIM/.vimrc ~/
 cp $tar_dir/.bashrc ~/
 cp $tar_dir/.tmux.conf ~/
@@ -85,18 +77,3 @@ git clone https://gitlab.com/farookphuket/my_zsh.git
 sh ~/my_zsh/setup.sh
 
 popd
-
-sleep 5s
-
-# ============== copy config file END =========================================
-
-fn_goodbye() {
-  dialog --colors \
-    --title "Operation done!" \
-    --msgbox "\Z4The operation has been done!
-            \\nThe change will take an effect in the next boot." \
-    16 60
-
-}
-
-fn_goodbye

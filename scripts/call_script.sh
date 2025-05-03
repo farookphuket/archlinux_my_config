@@ -64,7 +64,7 @@ sh $run_script_dir/font_install.sh
 
 # the web browser to install all web browser I use is take too much time
 # remove # sign from the below line if you want to install
-# sh $run_script_dir/web_browser.sh
+sh $run_script_dir/web_browser.sh
 
 # install the command line file manager "yazi"
 # sh $run_script_dir/yazi_cmd_file_manager.sh
