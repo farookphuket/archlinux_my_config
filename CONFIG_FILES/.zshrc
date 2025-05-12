@@ -51,6 +51,9 @@ alias cl='clear'
 alias vi="nvim ."
 alias vv="vim -c 'Lexplore'"
 
+# 13 May 2025 update 
+alias upPac="sudo pacman -Syu --needed --noconfirm"
+
 # =========== For Debian ,Ubuntu
 #alias nnet="cd /var/www/html; nautilus ."
 #alias tnet="cd /var/www/html/"

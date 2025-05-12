@@ -11,6 +11,14 @@
 
 # my last update 
 
+
+## I am too lazy 
+> so I tried to learn to use the script to manage thing more 
+> edit the `.zshrc` and `.bashrc` file to automatic update by typing `upPac`
+> will be equal to `sudo pacman -Syu --needed --noconfirm`
+
+--- 
+
 ## change script for second left screen 
 > the file is `system-overview` for conky `autostart.sh` for .dwm 
 > `2left_screens.sh` for the display 
