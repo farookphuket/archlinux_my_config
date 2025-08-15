@@ -12,10 +12,16 @@
 # my last update 
 
 
+## `vlc can't play h264` has fixed
+> 16 Aug 2025 I cannot play video that has .h264 
+> and it can be fix by `yay -Sy vlc-plugin-ffmpeg` command
+> `https://bbs.archlinux.org/viewtopic.php?id=306853`
+
 ## I am too lazy 
 > so I tried to learn to use the script to manage thing more 
 > edit the `.zshrc` and `.bashrc` file to automatic update by typing `upPac`
 > will be equal to `sudo pacman -Syu --needed --noconfirm`
+> to find and replace word under cursor in vim ",$s/old-word/replace-word" 
 
 --- 
 

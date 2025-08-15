@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo pacman -Syu --needed --noconfirm gimp pinta
+sudo pacman -Syu --needed --noconfirm gimp

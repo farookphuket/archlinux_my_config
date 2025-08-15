@@ -6,8 +6,10 @@ sudo pacman -Sy --needed --noconfirm noto-fonts noto-fonts-extra nerd-fonts
 # more font
 yay -Syu urxvt-resize-font-git ttf-ubuntu-font-family otf-font-awesome ttf-font-awesome ttf-ms-fonts --needed --noconfirm
 
+# go to home dir
 pushd ~/
 
+# clone fonnt to home dir
 git clone https://gitlab.com/farookphuket/my_fonts.git
 
 sleep 5s
@@ -35,6 +37,8 @@ if [ -d "$my_font" ]; then
   sudo rm -rf $my_font
 fi
 
+# check if the install directory then remove
+# [ -d " $my_font " ] rm -rf $my_font && echo "install dir has remove " || echo "cannot remove the INSTALL directory you have to do it manually "
 # sudo pacman -S --needed --noconfirm dialog
 
 TITLE="Success! your font has been install"
