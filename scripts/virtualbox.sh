@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # install virtualbox
-sudo pacman -S virtualbox --needed --noconfirm
+# 13 Nov. 2025 need to install linux-headers or cannot run `sudo /sbin/vboxconfig` otherwise
+sudo pacman -S virtualbox linux-headers --needed --noconfirm
 
 sleep 5s
 

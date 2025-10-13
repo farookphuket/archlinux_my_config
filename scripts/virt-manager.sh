@@ -1,5 +1,8 @@
 #!/bin/bash
 
+##    CANNOT use virt-manager after fresh install arch linux on 12 Nov. 2025
+## ERROR cannot open the iso file permision deny
+
 CONFIG_FILE_DIR=~/archlinux_my_config/CONFIG_FILES
 
 # to enable efi boot
