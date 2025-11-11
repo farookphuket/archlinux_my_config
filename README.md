@@ -4,7 +4,8 @@
 > my config for arch linux
 
 > I just start to using Arch Linux on 10 Nov 2021 
-> up until now 26 May 2024 I am admit that Arch linux is my favour Linux that I will love to use.
+> up until now 26 May 2024 I have to admit that 
+> ***Arch linux*** is my favour Linux that I will love to use of all time.
 
 
 
@@ -14,7 +15,19 @@
 
 ## `vlc can't play h264` has fixed
 > 16 Aug 2025 I cannot play video that has .h264 
-> and it can be fix by `yay -Sy vlc-plugin-ffmpeg` command
+> and it can be fix by run command 
+
+```
+yay -Sy vlc-plugin-ffmpeg 
+
+## OR 
+
+sudo pacman -S --needed vlc-plugins-all
+
+```
+
+
+
 > `https://bbs.archlinux.org/viewtopic.php?id=306853`
 
 ## I am too lazy 
