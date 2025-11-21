@@ -44,10 +44,10 @@ bindkey '^X^X' history-beginning-search-menu
 
 
 
-alias ll='ls -lh'
-alias la='ls -A'
-alias l='ls -CF'
-alias cl='clear'
+alias ll='ls -lh --color=auto'
+alias la='ls -A  --color=auto'
+alias l='ls -CF  --color=auto'
+alias cl='clear '
 alias vi="nvim ."
 alias vv="vim -c 'Lexplore'"
 
