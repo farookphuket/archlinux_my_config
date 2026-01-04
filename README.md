@@ -12,6 +12,12 @@
 
 # my last update 
 
+## VIM config copy from Tony
+> 5 Jan 2026 copy vim config from Tony youtube
+> `https://www.youtube.com/watch?v=-5lb_jLQmKc` 
+> the `.vimrc` file now only 1 line 
+> `source ~/.vim/.vimrc`
+
 
 ## `vlc can't play h264` has fixed
 > 16 Aug 2025 I cannot play video that has .h264 
