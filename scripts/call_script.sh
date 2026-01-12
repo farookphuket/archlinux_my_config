@@ -5,6 +5,8 @@
 
 run_script_dir=~/archlinux_my_config/scripts
 
+sh $run_script_dir/must_install.sh
+
 sh $run_script_dir/bluetooth.sh
 
 # install stack for my-logout

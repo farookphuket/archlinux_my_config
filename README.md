@@ -4,7 +4,9 @@
 > my config for arch linux
 
 > I just start to using Arch Linux on 10 Nov 2021 
+
 > up until now 26 May 2024 I have to admit that 
+
 > ***Arch linux*** is my favour Linux that I will love to use of all time.
 
 
@@ -12,10 +14,19 @@
 
 # my last update 
 
+## add `eza and bat` on 6 Jan 2026 
+
+> added `eza` and `bat` for a better cat and ls command 
+
+> added the rsync file on 12 Jan 2026 
+
 ## VIM config copy from Tony
 > 5 Jan 2026 copy vim config from Tony youtube
+
 > `https://www.youtube.com/watch?v=-5lb_jLQmKc` 
+
 > the `.vimrc` file now only 1 line 
+
 > `source ~/.vim/.vimrc`
 
 
