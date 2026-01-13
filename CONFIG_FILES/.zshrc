@@ -71,8 +71,7 @@ alias pwatch="npm run watch"
 alias cat="bat"
 alias ls="eza -l --icons"
 alias ll='eza -la   --icons'
-alias syu='sudo pacman -Syu'
-
+alias syu="sudo pacman -Syu"
 # just for using laravel edit on 21 Nov 21 with out this command you cannot run
 # laravel new when you start new laravel project
 # Add Composer bin-dir to PATH if it is installed.
@@ -82,8 +81,8 @@ alias syu='sudo pacman -Syu'
 }
 export PATH
 
-fastfetch
 
+fastfetch
 
 # To customize prompt, run `p10k configure` or edit /usr/share/zsh/p10k.zsh.
 # [[ ! -f /usr/share/zsh/p10k.zsh ]] || source /usr/share/zsh/p10k.zsh
@@ -91,3 +90,13 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+
+
+function cd (){
+  new_directory="$*";
+  if [ $# -eq 0 ]; then
+    new_directory=${HOME};
+  fi;
+  builtin cd "${new_directory}" && /bin/ls -lhF --time-style=long-iso --color=auto --ignore=lost+found
+}
+
