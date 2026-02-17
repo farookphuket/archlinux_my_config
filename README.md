@@ -14,6 +14,13 @@
 
 # my last update 
 
+
+## added `rofi-power-menu` 18 Feb 2026 
+> last add `rofi-power-menu` 
+
+
+---
+
 ## add `eza and bat` on 6 Jan 2026 
 
 > added `eza` and `bat` for a better cat and ls command 

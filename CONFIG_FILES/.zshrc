@@ -72,6 +72,11 @@ alias cat="bat"
 alias ls="eza -l --icons"
 alias ll='eza -la   --icons'
 alias syu="sudo pacman -Syu"
+
+## reload xkbmap if not response
+alias kbr="sh ~/.config/dwm/custom_script/set_kb.sh"
+
+
 # just for using laravel edit on 21 Nov 21 with out this command you cannot run
 # laravel new when you start new laravel project
 # Add Composer bin-dir to PATH if it is installed.
