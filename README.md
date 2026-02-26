@@ -16,7 +16,9 @@
 
 
 ## added `rofi-power-menu` 18 Feb 2026 
-> last add `rofi-power-menu` 
+
+1. last add `rofi-power-menu` for quick `shutdown , reboot , lock `
+2. using replace `htop` to `btop` 
 
 
 ---

@@ -42,7 +42,7 @@ super + F6
     vlc
 
 super + shift + h
-    urxvt -e htop
+    urxvt -e btop
 
 #(install i3exit on 31 Dec 2021)
 super + shift + l
