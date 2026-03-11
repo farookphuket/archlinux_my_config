@@ -14,6 +14,19 @@
 
 # my last update 
 
+## install 'Lame Srver' 11 Mar 2026 
+
+> cannot login to phpmyadmin fix this way
+
+> copy from `https://stackoverflow.com/questions/59426812/resetting-root-password-for-mariadb-does-not-work`
+
+
+[maria_db_1]:https://ia600801.us.archive.org/27/items/how-to_pic_cover/phpmyadmin_fix_login.png
+![fix login to phpmyadmin][maria_db_1]
+
+
+
+---
 
 ## added `rofi-power-menu` 18 Feb 2026 
 
