@@ -14,6 +14,31 @@
 
 # my last update 
 
+## added vim-multi 
+> for the multi select string on nvim use Ctrl+n to select q to skip 
+
+> this will make the `select word suggestion from menu` not working add 
+
+```
+
+vim.g.VM_maps = {
+    -- Change the default Tab to something else if needed, or disable it
+    ['Find Under'] = '<C-n>',
+    ['Find Subword Under'] = '<C-n>',
+    ['Select All'] = '\\A',
+}
+-- Alternatively, disable the default mappings entirely if they conflict
+vim.g.VM_default_mappings = 0 
+
+
+
+```
+> to the init.lua before call the plugin use the `Ctrl+n` or `Ctrl+p` to select word from word suggestion 
+```
+```
+
+---
+
 ## install 'Lame Srver' 11 Mar 2026 
 
 > cannot login to phpmyadmin fix this way

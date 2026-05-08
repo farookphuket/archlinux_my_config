@@ -12,17 +12,6 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
     os.exit(1)
   end
 end
-
--- add this line on 8 May 2026 for Select word suggestion from menu
-vim.g.VM_maps = {
-  -- Change the default Tab to something else if needed, or disable it
-  ["Find Under"] = "<C-n>",
-  ["Find Subword Under"] = "<C-n>",
-  ["Select All"] = "\\A",
-}
--- Alternatively, disable the default mappings entirely if they conflict
-vim.g.VM_default_mappings = 0
-
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
