@@ -3,6 +3,10 @@
 # noto font
 sudo pacman -Sy --needed --noconfirm noto-fonts noto-fonts-extra nerd-fonts
 
+sudo pacman -Sy --needed noto-fonts
+
+sudo pacman -Sy --needed ttf-ibm-plex
+
 # more font
 yay -Syu urxvt-resize-font-git ttf-ubuntu-font-family otf-font-awesome ttf-font-awesome ttf-ms-fonts --needed --noconfirm
 

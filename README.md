@@ -14,6 +14,15 @@
 
 # my last update 
 
+
+## install Thaifont 
+
+
+> `sudo pacman -S noto-fonts`
+
+> `sudo pacman -S ttf-ibm-plex` 
+
+
 ## added vim-multi 
 > for the multi select string on nvim use Ctrl+n to select q to skip 
 
