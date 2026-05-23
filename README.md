@@ -15,6 +15,27 @@
 # my last update 
 
 
+## full rebuild nvim config 
+> today 23 May 2026 as I got so many Error from my nvim because I use the config 
+
+> from so many source and some time it doesn't work very well so I decied to rebuild 
+
+> them using chatGPT as my guide to walk throught all of thoose step to archive the goald
+
+> and Vala I made it just copy nvim dir to your ~/.config and That its!   
+
+
+
+
+
+[my_nvim_23-may-26]:https://ia600801.us.archive.org/27/items/how-to_pic_cover/my-nvim.png
+![my nvim][my_nvim_23-may-26]
+
+
+
+
+---
+
 ## install Thaifont 
 
 
