@@ -7,5 +7,10 @@ echo "################################################"
 
 sudo pacman -S eza bat
 
+sudo pacman -Sy --needed docker docker-compose docker-buildx
+
+## ---- enable docker now 
+sudo systemctl enable --now docker
+
 # rofi power-menu last install 18 feb 2026
 yay -S rofi-power-menu
