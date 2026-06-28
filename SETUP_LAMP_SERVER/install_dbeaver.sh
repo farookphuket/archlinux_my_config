@@ -1,12 +1,12 @@
+
 #!/bin/bash
 
-echo "================ Installing DBeaver ====================================="
-echo " install java runtime for dbeaver if you see any Error message during "
-echo "installation you may have to re-run this installer script again."
-echo " "
+echo "========================================================================="
+echo " Installing DBeaver (Universal Database Manager)                         "
+echo " Note: Installs Java runtime required for running eclipse-based DBeaver. "
 echo "========================================================================="
 
-sudo pacman -Syyu
+# ติดตั้ง Java OpenJDK และ DBeaver ตัวเต็มแบบไม่ต้องยืนยัน
+sudo pacman -S --needed --noconfirm jre-openjdk dbeaver
 
-# =========== you have to install java to using dbeaver =======================
-sudo pacman -Syu --needed --noconfirm jre-openjdk dbeaver
+echo "DBeaver installed successfully."

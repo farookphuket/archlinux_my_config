@@ -14,3 +14,14 @@ sudo pacman -Syu --needed --noconfirm sushi nautilus-image-converter
 
 # screen zoom in 10 Feb 2022
 sudo pacman -Syu --needed --noconfirm kmag
+
+
+# install PostgreSQL on 28 June 2026
+sudo pacman -S postgresql
+
+sudo -u postgres initdb --locale en_US.UTF-8 -D '/var/lib/postgres/data'
+
+sudo systemctl start postgresql
+sudo systemctl enable postgresql
+
+
