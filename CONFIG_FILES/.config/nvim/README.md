@@ -1,10 +1,5 @@
-require("config.keymaps")
-
-added akinsho/toggleterm.nvim
-
-""
-''
-{} ""
+# my-chatgpt-nvim 
+> create on 23 May 2026 me and using chatGPT to config this to suit my liking
 
 ต่อไปที่ผมแนะนำสำหรับ config นาย:
 
@@ -30,7 +25,7 @@ our walk throught STEP progress
 [X]  🚀 session manager
 [X]  🚀 harpoon
 [X]  🚀 oil.nvim / mini.files
-[ ]  🚀 noice.nvim
+[X]  🚀 noice.nvim
 
 
 ตอนนี้ config นายเริ่ม “เป็น IDE จริง” แล้ว

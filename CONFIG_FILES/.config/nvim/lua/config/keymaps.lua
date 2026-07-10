@@ -29,10 +29,16 @@ vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Go to upper window" })
 
 -- buffers
 -- keymap.set("n", "<leader>/", ":ls<CR>", { desc = "List Buffers" })
-keymap.set("n", "<leader>/", ":Telescope buffers<CR>", {
+keymap.set("n", "<leader>,", ":Telescope buffers<CR>", {
 	desc = "Search Buffers",
 })
 
 -- move selected lines up/down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+vim.keymap.set("n", "<leader>bd", function()
+	Snacks.bufdelete()
+end, {
+	desc = "Delete current buffer",
+})

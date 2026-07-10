@@ -1,99 +1,100 @@
-#super + Return
-#	alacritty --working-directory ~/
+# =============================================================================
+#
+#  Simple Arch - Fully Optimized sxhkdrc (Farook's Desktop Keybindings)
+# =============================================================================
 
-
-# I like to use konsole as my favorite terminal
+# 💻 TERMINALS & SHELLS
+# Main Terminal emulator (Using Kitty as requested)
 super + Return
-#	konsole --workdir ~/
-	xfce4-terminal --default-working-directory=~/
+    kitty --directory ~/
+
+# Open Terminal with File Manager (Ranger via Alacritty)
+super + shift + Return
+    alacritty -e ranger ~/
+
+# Open Modern Terminal File Manager (Yazi)
+super + shift + f
+    alacritty -e yazi ~/Downloads
+
+# Open Terminal in Sudo mode (Using Kitty safely)
+super + shift + t
+    kitty -e sudo -i
 
 
-# open rofi like pop-os
+# 🚀 APPLICATION LAUNCHERS (Rofi Setup)
+# Open Application Finder (Using customized Rofi Arthur theme instead of xfce4)
 super + slash
-    xfce4-appfinder --collapsed
-    # change this on 12 Aug 2022
-    #rofi modi -show drun -theme fancy.rasi
+    rofi -show drun -theme arthur
+
+# Main App Menu launcher
+super + d
+    rofi -show drun -theme arthur
 
 
-# show theme selector 
-super + r 
+# [เมนูสำรอง] เรียกใช้ Dmenu (เร็ว แรง เบาหวิว เอาไว้กู้ชีพยาม Rofi เอ๋อ)
+super + p
+    dmenu_run -fn 'JetBrainsMono Nerd Font:size=11' -nb '#2e3440' -nf '#d8dee9' -sb '#88c0d0' -sf '#2e3440'
+
+# Show Theme Selector 
+super + r
     rofi-theme-selector
 
+# Power Session Menu (Shutdown, Reboot, Logout)
+super + x
+    rofi -show power-menu -modi power-menu:rofi-power-menu
 
-super + shift + Return
-    urxvt -e ranger ~/ 
 
+# 🌐 WEB BROWSERS (Mapped with installed core browsers)
 super + F1
-    brave 
+    google-chrome --no-default-browser-check
 
 super + F2
-	firefox -no-default-browser-check
+    firefox --no-default-browser-check
 
 super + F3
-    chromium -no-default-browser-check
+    chromium --no-default-browser-check
 
-super + F4
-    google-chrome-stable  -no-default-browser-check
 
-super + F5 
-    vivaldi-stable -no-default-browser-check
-
-super + F6 
+# 🎨 MULTIMEDIA & UTILITIES
+# Video/Media Player
+super + F6
     vlc
 
+# Music Player (Cmus run via Alacritty smoothly)
+super + m
+    alacritty -e sh -c "cmus; cmus-remote -C 'update-cache -f'"
+
+# System Resource Monitor (Btop via Alacritty)
 super + shift + h
-    urxvt -e btop
+    alacritty -e btop
 
-#(install i3exit on 31 Dec 2021)
-super + shift + l
-    blurlock
-
-super + d
-#	rofi -show drun -theme fancy
-#	rofi -show drun -theme sidebar
-#	rofi -show drun -theme dmenu
-	rofi -show drun -theme arthur
-
-
-super + shift + b
-	blueman-manager
-
-super + m 
-    urxvt -e "cmus" ; sleep 5s ; cmus-remote -C "update-cache -f"
-
-super + x
-  rofi -show power-menu -modi power-menu:rofi-power-menu
-		# sh -c "~/.config/dwm/custom_script/stop.sh"
-    # urxvt -e python /usr/share/archlinux-logout/archlinux-logout.py
-    # urxvt -e sh ~/.config/dwm/scripts/archlinux-logout.sh    
-    #urxvt -e sh ~/.config/dwm/custom_script/exit.sh 
-
-
+# Audio Mixer GUI Controller
 super + v
-   pavucontrol 
+    pavucontrol
 
-Print 
+# Screenshot Utility (Instantly open capture and edit)
+Print
     spectacle
 
+# Graphical File Manager (Nautilus from your setup list)
+super + t
+    nautilus ~/
 
-# restart keyboard
-super + alt 
-    ~/.config/dwm/custom_script/set_kb.sh
+# Bluetooth Manager
+super + shift + b
+    blueman-manager
 
-#Picom Toggle
+
+# 🔒 SYSTEM CONTROL & LOCK
+# Lock Screen using blur-lock as requested by Farook
+super + shift + l
+    blurlock
+    
+
+# Toggle Picom (Compositor Shadows/Transparency)
 ctrl + alt + o
     ~/.config/dwm/scripts/picom-toggle.sh
 
-# thunar file manager 10 Apr 2024
-super + t 
-  thunar ~/
-
-# open yazi 
-super + shift +f 
-  alacritty -e yazi ~/Downloads
-
-# open terminal in sudo mode
-super + shift + t
-	sudo xfce4-terminal --default-working-directory=/
-
-
+# Reset/Restart Keyboard Layout Script (Fixed keybinding to super+alt+k)
+super + alt + k
+    ~/.config/dwm/custom_script/set_kb.sh

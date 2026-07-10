@@ -1,31 +1,33 @@
 return {
-  {
-    "nvim-treesitter/nvim-treesitter",
+	{
+		"nvim-treesitter/nvim-treesitter",
 
-    build = ":TSUpdate",
+		build = ":TSUpdate",
 
-    config = function()
-      require("nvim-treesitter.configs").setup({
-        ensure_installed = {
-          "lua",
-          "javascript",
-          "typescript",
-          "tsx",
-          "html",
-          "css",
-          "json",
-          "bash",
-          "markdown",
-        },
+		config = function()
+			require("nvim-treesitter.configs").setup({
+				ensure_installed = {
+					"lua",
+					"javascript",
+					"typescript",
+					"tsx",
+					"html",
+					"css",
+					"json",
+					"bash",
+					"markdown",
+					"php",
+					"blade",
+				},
 
-        highlight = {
-          enable = true,
-        },
+				highlight = {
+					enable = true,
+				},
 
-        indent = {
-          enable = true,
-        },
-      })
-    end,
-  },
+				indent = {
+					enable = true,
+				},
+			})
+		end,
+	},
 }

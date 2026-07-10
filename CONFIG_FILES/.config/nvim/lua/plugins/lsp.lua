@@ -26,73 +26,56 @@ return {
 
 	{
 		"neovim/nvim-lspconfig",
+		dependencies = {
+			-- ผูกกับ blink.cmp เพื่อดึง capabilities ความเร็วสูงมาใช้งาน
+			"Saghen/blink.cmp",
+		},
 		config = function()
-			-- 		--      local lspconfig = require("lspconfig")
-			-- 		--
-			-- 		--      lspconfig.lua_ls.setup({})
-			-- 		--      lspconfig.ts_ls.setup({})
-			-- 		--      lspconfig.html.setup({})
-			-- 		--      lspconfig.cssls.setup({})
-			--
-			-- 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
+			local lspconfig = require("lspconfig")
+
+			-- ดึงค่าความสามารถ (Capabilities) จาก blink.cmp
 			local capabilities = require("blink.cmp").get_lsp_capabilities()
-			--
-			-- 		vim.lsp.config("lua_ls", {
-			--
-			-- 			capabilities = capabilities,
-			-- 		})
-			-- 		vim.lsp.config("ts_ls", {
-			-- 			capabilities = capabilities,
-			-- 		})
-			--
-			-- 		vim.lsp.config("html", {
-			-- 			capabilities = capabilities,
-			-- 		})
-			--
-			-- 		vim.lsp.config("cssls", {
-			-- 			capabilities = capabilities,
-			-- 		})
-			-- 		vim.lsp.enable("lua_ls")
-			-- 		vim.lsp.enable("ts_ls")
-			-- 		vim.lsp.enable("html")
-			-- 		vim.lsp.enable("cssls")
-			--
-			-- 		vim.api.nvim_create_autocmd("BufWritePre", {
-			-- 			callback = function()
-			-- 				vim.lsp.buf.format()
+
+			-- 1. Setup Lua LSP
+			lspconfig.lua_ls.setup({
+				capabilities = capabilities,
+			})
+
+			-- 2. Setup TypeScript/JavaScript LSP
+			lspconfig.ts_ls.setup({
+				capabilities = capabilities,
+			})
+
+			-- 3. Setup HTML LSP
+			lspconfig.html.setup({
+				capabilities = capabilities,
+			})
+
+			-- 4. Setup CSS LSP (สยบ Warning เรื่อง @theme และ @apply ของ Tailwind v4 ที่นี่เลย 🎯)
+			lspconfig.cssls.setup({
+				capabilities = capabilities,
+				settings = {
+					css = {
+						validate = true,
+						lint = {
+							unknownAtRules = "ignore",
+						},
+					},
+				},
+			})
+
+			-- Auto format ก่อนเซฟไฟล์ (เปิดไว้ได้เลย สะดวกมากๆ ครับ)
+			vim.api.nvim_create_autocmd("BufWritePre", {
+				callback = function()
+					vim.lsp.buf.format({ async = false })
+				end,
+			})
+
+			-- Keymaps ยอดนิยมสำหรับจัดการโค้ด
+			vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "LSP Hover Info" })
+			vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "LSP Go to Definition" })
+			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "LSP Code Action" })
+			vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "LSP Rename Variable" })
 		end,
-		-- 		})
-		--
-		-- 		vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-		-- 		vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
-		-- 		vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
-		-- 		vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, {})
-		-- 	end,
-	},
-
-	{
-		--		"hrsh7th/nvim-cmp",
-
-		-- config = function()
-		-- 	local cmp = require("cmp")
-		--
-		-- 	cmp.setup({
-		-- 		snippet = {
-		-- 			expand = function(args)
-		-- 				require("luasnip").lsp_expand(args.body)
-		-- 			end,
-		-- 		},
-		--
-		-- 		mapping = cmp.mapping.preset.insert({
-		-- 			["<C-Space>"] = cmp.mapping.complete(),
-		-- 			["<CR>"] = cmp.mapping.confirm({ select = true }),
-		-- 		}),
-		--
-		-- 		sources = cmp.config.sources({
-		-- 			{ name = "nvim_lsp" },
-		-- 			{ name = "luasnip" },
-		-- 		}),
-		-- 	})
-		-- end,
 	},
 }

@@ -14,15 +14,128 @@
 
 # my last update 
 
+## 🛠️ [July 2026] รีบูตยกเครื่องดีไซน์ DWM & DMENU (Architecture Cleanup)
+
+บันทึกการจัดระเบียบระบบร่วมกับวินัย (Gemini AI) เพื่อเป้าหมาย: **Clean (สะอาด), Light (บางเบา), Powerful (แข็งแกร่ง) และ Simple (เรียบง่าย)** โดยตัดความขัดแย้งของปุ่มลัดและปรับจูน UI ให้เป็นระบบโมเดิร์นไร้ที่ติ
+
+### 🚨 3 ข้อผิดพลาดสถาปัตยกรรมเก่า (Technical Debt Fixes)
+1. **การแย่งสิทธิ์ปุ่มลัด (Keybinding Hijack):** โค้ด DWM ดั้งเดิมล็อกปุ่ม `Super + p` ไว้ในซอร์สโค้ดฝั่งภาษา C เพื่อเรียกใช้งาน `dmenu_run` ซึ่งขัดแย้งกับสถาปัตยกรรมใหม่ที่รวมศูนย์คีย์บอร์ดไว้ที่ `sxhkdrc` (ทำให้ย้ายธีมหรือแก้ปุ่มยาก ต้องคอยคอมไพล์ใหม่)
+2. **ปุ่มทางเลือกเมาส์ชนกัน (Terminal Clashing):** ตัวแปร `termcmd` ใน DWM ตัวเก่าสั่งเรียกใช้หน้าต่าง `st` ยุคเก่า ซึ่งไม่ตรงกับ Terminal หลักปัจจุบันที่เราเปลี่ยนมาใช้ `Kitty` ทรงพลังกว่า
+3. **ดีไซน์และฟอนต์เหลื่อมล้ำ (Visual & Font Mismatch):** ตัว DWM ใช้ฟอนต์ขนาด 16 แต่ DMENU ใช้ขนาด 18 ทำให้ UI กระตุกตอนสลับการใช้งาน และการใช้ฟอนต์ `monospace` ดั้งเดิมทำให้เกิดปัญหาสระภาษาไทยลอย/ระเบิด รวมถึงไม่รองรับไอคอนของ Neovim (Nerd Fonts)
+
+
+### 🎨 แผนผังการทำงานของสถาปัตยกรรมใหม่ (The New Architecture Stack)
+
+[ ฮาร์ดแวร์ / หน้าจอระบบ ]
+│
+▼
+[ DWM (Window Manager) ] ──► (ดูแลเฉพาะ Layout และสลับ Tag หน้าจอเท่านั้น : เบาที่สุด)
+│
+▼
+[ SXHKD (Hotkeys Daemon) ] ──► (รับหน้าที่ดักปุ่มเปิดแอปทั้งหมด / ปุ่มสลับภาษา)
+│
+├─► [ เมนูหลัก ] ──► Rofi Launcher (Super + d / Super + /)
+├─► [ เมนูสำรอง ] ─► DMENU Fallback (Super + p) *กู้ชีพยาม Rofi เอ๋อ
+│
+▼
+[ KITTY Terminal ] ──► (ดักรันสคริปต์สวมจิตวิญญาณเชื่อมเข้าสู่ Tmux Session ทันที)
+│
+▼
+[ TMUX (Terminal Multiplexer) ] ──► [ NEOVIM (Laravel Code Editor) ]
+
+
+---
+
+### 💻 สรุปโค้ดคอนฟิกที่ได้รับการอัปเกรด
+
+#### 1. ไฟล์ `dwm/config.h` (Clean & Synced Layout)
+* **สิ่งที่ปรับปรุง:** ลบชุดคำสั่งเปิด dmenu ออกไปจากโค้ด C เพื่อยกสิทธิ์ให้ `sxhkd` เต็มตัว, อัปเกรดระบบฟอนต์คู่ร่วม `JetBrainsMono Nerd Font` และ `IBM Plex Sans Thai` (ขนาด 11 เท่ากันทั้งระบบเพื่อความสมดุล), เปลี่ยนปุ่มเมาส์กลางบน Bar ให้เรียกเปิดเข้าใช้งาน `kitty` แทน `st`
+
+```c
+/* Upgraded by Farook & Winai (July 2026) */
+static const unsigned int borderpx  = 2;        /* เพิ่มความหนาขอบให้คมชัด */
+static const unsigned int snap      = 32;       
+static const int showsystray        = 1;     
+
+/* 🎨 ระบบฟอนต์โปรแกรมเมอร์ ไม่ระเบิด สระไม่ลอย รองรับ Nerd Icons */
+static const char *fonts[]          = { "JetBrainsMono Nerd Font:size=11", "IBM Plex Sans Thai:size=11" };
+static const char dmenufont[]       = "JetBrainsMono Nerd Font:size=11";
+
+/* 🎨 Nord Modern Theme Color Palette */
+static const char col_bg[]          = "#2e3440"; 
+static const char col_border_norm[] = "#4c566a"; 
+static const char col_fg[]          = "#d8dee9"; 
+static const char col_active[]      = "#88c0d0"; 
+
+static const char *colors[][3]      = {
+    [SchemeNorm] = { col_fg,     col_bg,     col_border_norm },
+    [SchemeSel]  = { col_bg,     col_active, col_active      },
+};
+
+static const float mfact     = 0.55; 
+static const int resizehints = 0;    /* บังคับ Terminal ขยายหน้าต่างเต็มช่อง Grid ไร้รอยโหว่ */
+
+/* เปลี่ยนคำสั่งเมาส์คลิกกลางบน Bar ให้เปิด Kitty */
+static const char *termcmd[]  = { "kitty", NULL };
+
+2. ไฟล์ dmenu/config.h (Theme & Font Matching)
+
+    สิ่งที่ปรับปรุง: ปรับขนาดฟอนต์ให้เหลือ 11 ซิงค์เข้าคู่กับหน้าจอหลักบาร์บน ไม่ให้หน้าต่างเมนูค้นหาหนาเหลื่อมล้ำกัน, เปลี่ยนธีมสีเป็นสไตล์ Nord Theme ให้อ่านง่าย สบายสายตา
+
+C
+
+/* Upgraded by Farook & Winai (July 2026) */
+static int topbar = 1;                      
+static const char *fonts[] = {
+    "JetBrainsMono Nerd Font:size=11",
+    "IBM Plex Sans Thai:size=11"
+};
+
+static const char *colors[SchemeLast][2] = {
+    [SchemeNorm] = { "#d8dee9", "#2e3440" }, /* อักษรขาวนวล บนพื้นเทาเข้ม */
+    [SchemeSel]  = { "#2e3440", "#88c0d0" }, /* ไฮไลท์แถบสีฟ้าสว่าง ตัวหนังสือตัดเข้ม */
+    [SchemeOut]  = { "#000000", "#00ffff" },
+};
+static const char worddelimiters[] = " /?\"&[]";
+
+3. ระบบแผนสำรองล็อคสองชั้นใน ~/.config/dwm/sxhkd/sxhkdrc
+
+    แนวคิดยืดหยุ่นสูง (Resilient Setup): รวมศูนย์การสั่งงานเปิดแอปไว้ที่เดียว ยามปกติใช้ Rofi เพื่อความสวยงามคล่องตัว แต่หาก rofi เกิดหยุดทำงานหรือค้าง สามารถกดปุ่มสำรองเพื่อเรียก dmenu ขึ้นมากู้ระบบได้ทันทีโดยไม่ต้องเปิด Terminal
+
+
+
+
+# 🚀 APPLICATION LAUNCHERS (Dual-Menu Setup)
+
+# [เมนูหลัก] เรียกใช้งาน Rofi สวยงาม รวดเร็ว
+super + d
+    rofi -show drun -theme arthur
+
+super + slash
+    rofi -show drun -theme arthur
+
+# [เมนูสำรอง / ระบบกู้ชีพ] สั่งเรียกใช้งาน DMENU ทันทีหาก Rofi มีปัญหา
+super + p
+    dmenu_run -fn 'JetBrainsMono Nerd Font:size=11' -nb '#2e3440' -nf '#d8dee9' -sb '#88c0d0' -sf '#2e3440'
+
+
+
+
+
+
+--- 
 
 ## full rebuild nvim config 
+
 > today 23 May 2026 as I got so many Error from my nvim because I use the config 
 
 > from so many source and some time it doesn't work very well so I decied to rebuild 
 
-> them using chatGPT as my guide to walk throught all of thoose step to archive the goald
+> them and using AI as my guide to walk throught all of thoose step to archive the goald
 
-> and Vala I made it just copy nvim dir to your ~/.config and That its!   
+> and Vala I made it!  
+
+> just copy nvim dir to your ~/.config and That its!   
 
 
 
@@ -57,19 +170,22 @@ vim.g.VM_maps = {
     ['Find Subword Under'] = '<C-n>',
     ['Select All'] = '\\A',
 }
+
 -- Alternatively, disable the default mappings entirely if they conflict
 vim.g.VM_default_mappings = 0 
 
 
 
 ```
+
+
 > to the init.lua before call the plugin use the `Ctrl+n` or `Ctrl+p` to select word from word suggestion 
-```
-```
+
+
 
 ---
 
-## install 'Lame Srver' 11 Mar 2026 
+## install 'Lame Server' 11 Mar 2026 
 
 > cannot login to phpmyadmin fix this way
 
