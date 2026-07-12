@@ -1,31 +1,30 @@
-#!/bin/bash 
+#!/bin/bash
+# =============================================================================
+#  Development Environment & Code Editors Stack
+# =============================================================================
+set -e
 
+printf "\n[*] Resolving Zsh site-functions conflict overlays for builders...\n"
+for conf_file in _composer _alacritty; do
+    if [ -f "/usr/share/zsh/site-functions/$conf_file" ]; then
+        sudo rm -rf "/usr/share/zsh/site-functions/$conf_file"
+    fi
+done
 
-ex_cps=/usr/share/zsh/site-functions/_composer
-if [ -f "$ex_cps" ] ; then 
-    sudo rm -rf $ex_cps
-fi
+printf "\n[*] Deploying Modern Text Editors and System Multiplexers...\n"
+# code: Open-source VS Code binary for Arch Linux
+sudo pacman -S --needed --noconfirm tmux neovim helix code
 
-ex_alc=/usr/share/zsh/site-functions/_alacritty 
-if [ -f "$ex_alc" ] ; then 
-    sudo rm -rf $ex_alc
-fi 
+printf "\n[*] Deploying Shell Utilities & Environment Essentials...\n"
+# ตัด ueberzug เก่าออกชั่วคราวเพราะ Yazi/Ranger ยุคใหม่ดึงผ่าน Engine อื่นที่เบากว่าได้
+sudo pacman -S --needed --noconfirm ranger tree rsync
 
-# gvim will be conflick with vim so you have to remove vim 
-
-sudo pacman -S --needed --noconfirm gvim helix
-
-# atom will be no longer support on the end of Dec. 2022
-sudo pacman -S --needed --noconfirm tmux neovim powerline code  
-
-sudo pacman -S --needed --noconfirm ranger ueberzug
-
-sudo pacman -S --needed --noconfirm tree rsync rxvt-unicode alacritty
-
+printf "\n[*] Engineering Web Development Runtime Stack (NodeJS & PHP tools)...\n"
 sudo pacman -S --needed --noconfirm yarn nodejs npm composer
 
+printf "\n[*] Bootstrapping Global Laravel Installer Framework...\n"
+# 💡 ป้องกันสคริปต์หา Path ไม่เจอด้วยการระบุ Directory ชัดเจน ป้อนทีเดียวจบ
+export PATH="$HOME/.config/composer/vendor/bin:$PATH"
+composer global require --dev laravel/installer --quiet
 
-# only to set composer for using laravel installer global 
-# last edit 21 Nov 21
-# this way you can just type laravel new to create new laravel project
-composer global require laravel/installer
+printf "[SUCCESS] Code editors and Full-Stack web development engines are ready.\n"

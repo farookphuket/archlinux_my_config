@@ -1,82 +1,54 @@
 #!/bin/bash
 
-# this script will call another script
-# edit this file by add "#" infront of any propgramyou do not want to install
+# =============================================================================
+#  Post-Setup Application Pipeline Orchestrator
+#  Refined Workflow: Run-All Suite Configuration
+# =============================================================================
+set -e
 
-run_script_dir=~/archlinux_my_config/scripts
+# Dynamically resolve script path safely
+RUN_SCRIPT_DIR="$HOME/archlinux_my_config/scripts"
 
-sh $run_script_dir/must_install.sh
+printf "\n[>>>] Pipeline Phase 1: Deploying Core Infrastructure Stack...\n"
+sh "$RUN_SCRIPT_DIR/must_install.sh"
+sh "$RUN_SCRIPT_DIR/bluetooth.sh"
+sh "$RUN_SCRIPT_DIR/partition_file_tools.sh"
 
-sh $run_script_dir/bluetooth.sh
+printf "\n[>>>] Pipeline Phase 2: Deploying Desktop Frameworks & Toolings...\n"
+# คัดเฉพาะโครงสร้างหลักที่เบาหวิวและซิงค์คู่กับ DWM Window Manager
+sh "$RUN_SCRIPT_DIR/gnome_kde_xfce_apps.sh"
+sh "$RUN_SCRIPT_DIR/iso_image_writer.sh"
+sh "$RUN_SCRIPT_DIR/media_player_app.sh"
+sh "$RUN_SCRIPT_DIR/screen_capture.sh"
+sh "$RUN_SCRIPT_DIR/applet.sh"
 
-# install stack for my-logout
-# sh $run_script_dir/my-logout.sh
+printf "\n[>>>] Pipeline Phase 3: Localization & Network Optimization...\n"
+sh "$RUN_SCRIPT_DIR/font_install.sh"
+sh "$RUN_SCRIPT_DIR/web_browser.sh"
 
-# code editor
-# sh $run_script_dir/code_editor.sh
+printf "\n[>>>] Pipeline Phase 4: Deploying Advanced User & Development Applications...\n"
+# กลุ่ม Code Editor และเครื่องมือสาย Web Development (Laravel Stack)
+sh "$RUN_SCRIPT_DIR/code_editor.sh"
+sh "$RUN_SCRIPT_DIR/postgresql.sh"           # 🎯 แทรกเข้าไลน์ท่อส่งหลังแยกไฟล์เรียบร้อย
+sh "$RUN_SCRIPT_DIR/web_dev_tools.sh"        # Postman Client Tool
+sh "$RUN_SCRIPT_DIR/yazi_cmd_file_manager.sh" # CLI File Manager ความเร็วสูง
 
-# partition tools and file system
-sh $run_script_dir/partition_file_tools.sh
+printf "\n[>>>] Pipeline Phase 5: Deploying Productivity & Media Production Suites...\n"
+# กลุ่มโปรแกรมสร้างสรรค์ผลงาน เอกสาร และระบบจำลอง OS
+sh "$RUN_SCRIPT_DIR/download_tools.sh"        # Modern yt-dlp Engine
+sh "$RUN_SCRIPT_DIR/gimp.sh"
+sh "$RUN_SCRIPT_DIR/libre_office.sh"
+sh "$RUN_SCRIPT_DIR/shutter.sh"
+sh "$RUN_SCRIPT_DIR/virt-manager.sh"
+sh "$RUN_SCRIPT_DIR/virtualbox.sh"
+sh "$RUN_SCRIPT_DIR/sound_video_editor.sh"
+sh "$RUN_SCRIPT_DIR/other_app.sh"            # อัปเดตใหม่: เหลือเฉพาะ Utility ทั่วไป
+sh "$RUN_SCRIPT_DIR/media_production_utils.sh" # 🎯 ตัวรวมร่างใหม่ (แทน 4kslideshowmaker และ puddletag)
+sh "$RUN_SCRIPT_DIR/joplin.sh"
 
-# download_tools.sh
-# sh $run_script_dir/download_tools.sh
+# =============================================================================
+#  Optional / Hardware Specific Pipeline Block (Uncomment to activate)
+# =============================================================================
+# sh "$RUN_SCRIPT_DIR/nvidia-driver.sh"       # เปิดใช้เฉพาะเครื่องที่มีการ์ดจอค่ายเขียว Nvidia 
 
-# gimp is a photo editor like photoshop
-#sh $run_script_dir/gimp.sh
-
-sh $run_script_dir/gnome_app.sh
-
-sh $run_script_dir/iso_image_writer.sh
-
-sh $run_script_dir/kde_app.sh
-
-# the office suit program
-# sh $run_script_dir/libre_office.sh
-
-sh $run_script_dir/media_player_app.sh
-
-# screen capture program
-sh $run_script_dir/screen_capture.sh
-
-#sh $run_script_dir/shutter.sh
-
-#sh $run_script_dir/virt-manager.sh
-
-#sh $run_script_dir/virtualbox.sh
-
-sh $run_script_dir/xfce4_app.sh
-
-# the taskbar icon
-sh $run_script_dir/applet.sh
-
-# setup font for better Thai(and other like Chinese) Language support
-sh $run_script_dir/font_install.sh
-
-#sh $run_script_dir/sound_video_editor.sh
-
-# this script will install the other program
-# sh $run_script_dir/other_app.sh
-
-# photofilmstrip is has Error from python script
-# 1 Mar 2022
-# sh $run_script_dir/photofilmstrip.sh
-
-# to make photo slideshow as video
-# sh $run_script_dir/4kslideshowmaker.sh
-
-# the web browser to install all web browser I use is take too much time
-# remove # sign from the below line if you want to install
-sh $run_script_dir/web_browser.sh
-
-# install the command line file manager "yazi"
-# sh $run_script_dir/yazi_cmd_file_manager.sh
-
-# install puddletag on 09 Jan 2022
-#sh $run_script_dir/puddletag.sh
-
-# nvidia driver for nvidia graphic card
-#sh $run_script_dir/nvidia-driver.sh
-
-# joplin is the note taking app
-# that make mylife easier to create&preview markdown
-# sh $run_script_dir/joplin.sh
+printf "\n[SUCCESS] Master Application Pipeline Finished All-Execution Setup.\n"

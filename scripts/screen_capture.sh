@@ -1,6 +1,12 @@
 #!/bin/bash
+# =============================================================================
+#  Screen Recording & Dynamic Capturing Tools
+# =============================================================================
+set -e
 
-# notice spactacle has in stall by kde_app.sh
+printf "\n[*] Deploying Broadcasting and Capture Frameworks...\n"
+# obs-studio: โปรแกรมอัดหน้าจอและสตรีมมิ่งระดับโปร
+# spectacle: ทูลจับภาพหน้าจอกราฟิกประสิทธิภาพสูงของค่าย KDE
+sudo pacman -S --needed --noconfirm obs-studio spectacle
 
-# obs-studio screen cast
-sudo pacman -S --needed --noconfirm obs-studio spactacle
+printf "[SUCCESS] Screen recording and capturing toolchains deployed.\n"

@@ -1,52 +1,49 @@
 #!/bin/bash
+set -e
 
-# noto font
-sudo pacman -Sy --needed --noconfirm noto-fonts noto-fonts-extra nerd-fonts
+printf "\n[*] Synchronizing System Base Fonts (Noto & Modern Layouts)...\n"
+sudo pacman -S --needed --noconfirm \
+    noto-fonts \
+    noto-fonts-extra \
+    ttf-ibm-plex \
+    ttf-ubuntu-font-family \
+    ttf-font-awesome
 
-sudo pacman -Sy --needed noto-fonts
+printf "\n[*] Fetching Auxiliary Desktop Layout Fonts via AUR...\n"
+yay -S --noconfirm --needed otf-font-awesome ttf-ms-fonts
 
-sudo pacman -Sy --needed ttf-ibm-plex
+printf "\n[*] Cloning Customized Personal Typography Repositories...\n"
+cd "$HOME"
+[ -d "$HOME/my_fonts" ] && rm -rf "$HOME/my_fonts"
 
-# more font
-yay -Syu urxvt-resize-font-git ttf-ubuntu-font-family otf-font-awesome ttf-font-awesome ttf-ms-fonts --needed --noconfirm
+git clone https://gitlab.com/farookphuket/my_fonts.git "$HOME/my_fonts"
+sleep 2
 
-# go to home dir
-pushd ~/
+# Target system paths definitions
+FONT_SOURCE_DIR="$HOME/my_fonts/FONTS"
+# 🎯 ปรับแก้ตรงนี้ตามที่พี่ชอบ! ให้สร้างโฟลเดอร์ตามชื่อ USER หรือ ROOT ที่เป็นคนกดรันสคริปต์
+FONT_TARGET_DIR="/usr/share/fonts/custom_$USER"
 
-# clone fonnt to home dir
-git clone https://gitlab.com/farookphuket/my_fonts.git
+# Create exclusive subdirectory dynamically based on user context
+sudo mkdir -p "$FONT_TARGET_DIR"
 
-sleep 5s
-
-cd ~/my_fonts/FONTS/
-
-font_source_dir=~/my_fonts/FONTS/
-font_target_dir=/usr/share/fonts/
-
-sudo cp -r $font_source_dir/Nerd_font/ $font_target_dir
-sudo cp -r $font_source_dir/TH-FONT/ $font_target_dir
-sudo cp -r $font_source_dir/Hack/ $font_target_dir
-sudo cp -r $font_source_dir/3270/ $font_target_dir
-
-popd
-
-sudo fc-cache -vf
-
-sleep 5s
-
-## delete font dir as no longer need
-my_font=~/my_fonts
-
-if [ -d "$my_font" ]; then
-  sudo rm -rf $my_font
+printf "\n[*] Deploying custom font packages to system landscape...\n"
+if [ -d "$FONT_SOURCE_DIR" ]; then
+    # Copy all custom typography safely
+    sudo cp -r "$FONT_SOURCE_DIR"/. "$FONT_TARGET_DIR/"
 fi
 
-# check if the install directory then remove
-# [ -d " $my_font " ] rm -rf $my_font && echo "install dir has remove " || echo "cannot remove the INSTALL directory you have to do it manually "
-# sudo pacman -S --needed --noconfirm dialog
+printf "\n[*] Rebuilding Global OS Font Cache Schemas...\n"
+sudo fc-cache -f -v > /dev/null
 
-TITLE="Success! your font has been install"
-back_title="$USER please reboot your machine"
-body_msg="dear $USER your font has been installed! you may have to reboot your system now"
+# Clean up staging installation files locally
+printf "\n[*] Purging staging font directories...\n"
+rm -rf "$HOME/my_fonts"
 
-dialog --clear --title "$TITLE" --backtitle "$back_title" --msgbox "$body_msg" 16 45
+# Render Final English completion status box (เปลี่ยนเครดิตเป็น Open-Source)
+TITLE="Typography Installation Success"
+BACK_TITLE="System Action Required"
+BODY_MSG="Dear $USER, your custom typography and Nerd-icons have been successfully optimized and integrated into Arch Linux.\n\nEngineered via Open-Source Collaboration & Winai AI."
+
+clear
+dialog --clear --title "$TITLE" --backtitle "$BACK_TITLE" --msgbox "$BODY_MSG" 12 60

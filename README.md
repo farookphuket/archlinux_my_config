@@ -14,6 +14,13 @@
 
 # my last update 
 
+## 13 Jul 2026 
+> i just find out that i am not good with lazygit! 
+
+
+
+---
+
 ## 🛠️ [July 2026] รีบูตยกเครื่องดีไซน์ DWM & DMENU (Architecture Cleanup)
 
 บันทึกการจัดระเบียบระบบร่วมกับวินัย (Gemini AI) เพื่อเป้าหมาย: **Clean (สะอาด), Light (บางเบา), Powerful (แข็งแกร่ง) และ Simple (เรียบง่าย)** โดยตัดความขัดแย้งของปุ่มลัดและปรับจูน UI ให้เป็นระบบโมเดิร์นไร้ที่ติ

@@ -1,15 +1,18 @@
 #!/bin/bash
+# =============================================================================
+#  CUPS Printing Core Framework & HP Device Drivers Setup
+# =============================================================================
+set -e
 
-echo " ===================== Install HP 3830 Printer Driver ================="
-echo " please wait...."
-echo " ======================================================================"
+printf "\n[*] Deploying Linux Printing Core Engine (CUPS Layouts)...\n"
+sudo pacman -S --needed --noconfirm cups system-config-printer cups-browsed bluez-cups
 
-# Install cups for arch linux
-sudo pacman -Syu cups system-config-printer cups-browsed --needed --noconfirm
-sudo pacman -Sy bluez-cups --needed --noconfirm
+printf "\n[*] Launching System Printing Daemons seamlessly...\n"
+# --now: สั่งทั้ง Enable (เปิดถาวรตอนเปิดเครื่อง) และ Start (รันทันทีตอนนี้) ควบในคำสั่งเดียว
+sudo systemctl enable --now cups.service
 
-# start deamon  after install
-sudo systemctl enable cups
-sudo systemctl start cups
+printf "\n[*] Compiling HP Linux Imaging and Printing Tools (HPLIP)...\n"
+# hplip: ไดรเวอร์ตรงรุ่นสำหรับ HP DeskJet 3830 และรุ่นอื่นๆ ของ HP
+yay -S --needed --noconfirm hplip
 
-yay -S hplip
+printf "[SUCCESS] Printing infrastructure tailored for HP 3830 is ready.\n"

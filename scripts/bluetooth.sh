@@ -1,12 +1,25 @@
 #!/bin/bash
+# =============================================================================
+#  Bluetooth Subsystem & Systray Audio Controllers Deployment
+# =============================================================================
+set -e
 
-sudo pacman -Syu pavucontrol pulseaudio-bluetooth pulseaudio --needed --noconfirm
+printf "\n[*] Installing Bluetooth Stack and Core Signal Utilities...\n"
+# bluez: แกนหลักบลูทูธ, bluez-utils: รวมคำสั่งควบคุม (เช่น bluetoothctl)
+# blueman & blueberry: อินเตอร์เฟซกราฟิกสำหรับกดเชื่อมต่ออุปกรณ์
+sudo pacman -S --needed --noconfirm \
+    bluez \
+    bluez-utils \
+    bluez-tools \
+    blueman \
+    blueberry \
+    pavucontrol
 
-sudo systemctl start pulseaudio
+printf "\n[*] Activating Bluetooth Hardware Daemons...\n"
+sudo systemctl enable --now bluetooth.service
 
-yay -Sy pa-applet-git pamixer-git --needed --noconfirm
+printf "\n[*] Fetching Audio Level Trays and Mixers via AUR...\n"
+# pa-applet-git: ไอคอนปรับเสียงบน Systray ของ DWM ที่พี่ใช้ใน autostart.sh
+yay -S --needed --noconfirm pa-applet-git pamixer-git
 
-sudo pacman -Syu blueberry blueman bluez-utils bluez bluez-tools --needed --noconfirm
-
-sudo systemctl start bluetooth.service
-sudo systemctl enable bluetooth.service
+printf "[SUCCESS] Bluetooth and Audio integration layer deployed successfully.\n"

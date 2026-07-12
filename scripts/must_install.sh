@@ -1,20 +1,22 @@
 #!/bin/bash
+set -e
 
-# the must have install app
-echo "################################################"
-echo "######  the must install app on the system!! ###"
-echo "################################################"
+printf "\n[*] Deploying Core Utilities and Modern CLI replacements...\n"
+sudo pacman -S --needed --noconfirm eza bat
 
-sudo pacman -S eza bat
+printf "\n[*] Configuring Virtualization Layer & Docker Runtime Engines...\n"
+sudo pacman -S --needed --noconfirm docker docker-compose docker-buildx
 
-sudo pacman -Sy --needed docker docker-compose docker-buildx
+# Activate systemd hooks immediately
+printf "\n[*] Bootstrapping Docker Systemd Daemons...\n"
+sudo systemctl enable --now docker.service
 
-## ---- enable docker now 
-sudo systemctl enable --now docker
+# Inject current execution user context into security group policy
+printf "\n[*] Injecting user privileges into runtime groups...\n"
+sudo usermod -aG docker "$USER"
 
-# --- give a permission this user
-sudo usermod -aG docker $USER
-newgrp docker
+printf "\n[*] Deploying System Management Overlays via AUR...\n"
+# Avoid standard hands-on confirmation checks
+yay -S --noconfirm --needed rofi-power-menu
 
-# rofi power-menu last install 18 feb 2026
-yay -S rofi-power-menu
+printf "[SUCCESS] System Infrastructure and Docker Layers configured.\n"

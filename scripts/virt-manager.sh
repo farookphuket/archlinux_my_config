@@ -1,51 +1,50 @@
 #!/bin/bash
+# =============================================================================
+#  QEMU/KVM & Virt-Manager Virtualization Engine
+# =============================================================================
+set -e
 
-##    CANNOT use virt-manager after fresh install arch linux on 12 Nov. 2025
-## ERROR cannot open the iso file permision deny
+CONFIG_FILE_DIR="$HOME/archlinux_my_config/CONFIG_FILES"
 
-CONFIG_FILE_DIR=~/archlinux_my_config/CONFIG_FILES
+printf "\n[*] Deploying QEMU/KVM Virtualization Core Packages...\n"
+sudo pacman -S --needed --noconfirm \
+    dmidecode edk2-ovmf virt-manager qemu-desktop \
+    vde2 ebtables dnsmasq bridge-utils openbsd-netcat
 
-# to enable efi boot
-sudo pacman -Syu dmidecode edk2-ovmf --needed --noconfirm
-
-sudo pacman -Syu virt-manager qemu vde2 ebtables dnsmasq bridge-utils openbsd-netcat --needed --noconfirm
-
-# ================== 16 Feb 2022 cannot install arch linux guest =============
-# copy from https://bbs.archlinux.org/viewtopic.php?id=250735
-# on 16 Feb 2022
-# to install arch linux follow this page
-# https://www.freecodecamp.org/news/how-to-install-arch-linux/
+printf "\n[*] Configuring UEFI/OVMF Firmware Paths for QEMU...\n"
 sudo mkdir -p /etc/qemu
+if [ -f "/usr/share/qemu/firmware/60-edk2-ovmf-x86_64.json" ]; then
+    sudo cp /usr/share/qemu/firmware/60-edk2-ovmf-x86_64.json /etc/qemu/
+fi
 
-sudo cp /usr/share/qemu/firmware/60-edk2-ovmf-x86_64.json /etc/qemu
+printf "\n[*] Injecting Virtualization Group Privileges to user context...\n"
+# ผูกสิทธิ์ให้ user ปัจจุบันมีสิทธิ์สั่งงาน Engine เสมือนโดยตรง
+sudo usermod -aG libvirt,kvm "$USER"
 
-sudo systemctl restart libvirtd
+printf "\n[*] Injecting Virtual Bridge Network Templates...\n"
+if [ -d "$CONFIG_FILE_DIR/networks" ]; then
+    sudo mkdir -p /usr/share/libvirt/networks
+    sudo cp -r "$CONFIG_FILE_DIR/networks/". /usr/share/libvirt/networks/
+fi
 
-# ================== fixed cannot boot after install arch linux on
-# guest machine
+printf "\n[*] Optimizing Active Virtualization Core Services...\n"
+# บูตระบบจัดการ Engine ทันที
+sudo systemctl enable --now libvirtd.service
 
-# fix network default not define 14 Nov 2021 from :
-# https://blog.programster.org/kvm-missing-default-network
-sudo cp -r $CONFIG_FILE_DIR/networks/ /usr/share/libvirt/
+# ดักจับเวลาหน่วงเพื่อให้ socket พร้อมก่อนสั่งงาน virsh
+sleep 2
 
-sudo virsh net-define /usr/share/libvirt/networks/default.xml
+# ตรวจสอบและลงทะเบียนโครงข่ายเน็ตเวิร์กเริ่มต้นแบบเงียบ
+if [ -f "/usr/share/libvirt/networks/default.xml" ]; then
+    sudo virsh net-define /usr/share/libvirt/networks/default.xml || true
+    sudo virsh net-start default || true
+    sudo virsh net-autostart default || true
+fi
 
-sudo virsh net-autostart --network default
+# Render Notification Box (English text fallback)
+TITLE="Virtualization Setup Complete"
+BACK_TITLE="Action Required"
+BODY_MSG="Dear $USER, the QEMU/KVM & Virt-Manager framework has been integrated successfully.\n\nCRITICAL: You MUST restart your machine to fully apply the security groups and access ISO directories."
 
-sleep 5s
-
-# enable libvirt on boot
-sudo systemctl enable libvirtd
-
-# start libvirt now
-sudo systemctl start libvirtd
-
-# add user to group
-sudo usermod -aG libvirt $USER
-
-msg_title="Success! : config virt manager"
-msg_back="please Restart your machine!"
-msg_body="your virt-manager has been install successfully but some service maybe not set yet! 
-please restart your machine in order to use this program"
-
-dialog --title "$msg_title" --backtitle "$msg_back" --msgbox "$msg_body" 14 65
+clear
+dialog --clear --title "$TITLE" --backtitle "$BACK_TITLE" --msgbox "$BODY_MSG" 12 60

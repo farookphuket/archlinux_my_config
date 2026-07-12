@@ -1,10 +1,16 @@
 #!/bin/bash
+# =============================================================================
+#  Modern Network Download Tools Stack
+# =============================================================================
+set -e
 
-ex_yd=/usr/share/zsh/site-functions/_youtube-dl
-
-if [ -f "$ex_yd" ]; then
-  sudo rm -rf $ex_yd
+printf "\n[*] Purging outdated legacy download scripts from Zsh logs...\n"
+if [ -f "/usr/share/zsh/site-functions/_youtube-dl" ]; then
+    sudo rm -rf "/usr/share/zsh/site-functions/_youtube-dl"
 fi
 
-# install youtube-dl
-# sudo  pacman -S --needed --noconfirm rsync
+printf "\n[*] Deploying High-Speed Network Media Downloader Engine...\n"
+# yt-dlp: ตัวแทนที่ทรงพลังที่สุดของ youtube-dl โหลดวิดีโอและไฟล์ได้ทุกแพลตฟอร์ม
+sudo pacman -S --needed --noconfirm yt-dlp aria2 curl wget
+
+printf "[SUCCESS] Modern download suite engines are fully integrated.\n"

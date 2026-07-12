@@ -1,8 +1,8 @@
-#!/bin/bash 
+#!/bin/bash
+set -e
 
+printf "\n[*] Extracting Shutter Capture Tool from Snap Isolated Containment...\n"
+# Ensure snap core layout is initialized safely
+sudo snap install shutter
 
-
-# shutter will only work if install from snap store
-# this file was create on 30 Oct 2021 
-
-sudo snap install shutter 
+printf "[SUCCESS] Shutter deployment completed seamlessly.\n"

@@ -1,24 +1,14 @@
 #!/bin/bash
+# =============================================================================
+#  Web Browser Environments Deployment Suite
+# =============================================================================
+set -e
 
-yay -Sy brave-bin --needed --noconfirm
+printf "\n[*] Deploying Core Web Browsers from official repositories...\n"
+sudo pacman -S --needed --noconfirm firefox chromium vivaldi
 
-sudo pacman -Sy firefox chromium vivaldi --needed --noconfirm
+printf "\n[*] Compiling Binary Web Browsers via AUR Context...\n"
+# ดึงแพ็กเกจตรงรวดเร็ว ไม่ค้างหน้ารอการกดยืนยัน
+yay -S --needed --noconfirm brave-bin google-chrome
 
-# last update 4 May 2025
-cd ~/
-
-# clone google-chrome repo
-git clone https://aur.archlinux.org/google-chrome.git
-cd ~/google-chrome
-
-# run setup google-chrome script
-makepkg -si
-
-cd ~/
-
-# remove google-chrome directory after install
-rm -rf ~/google-chrome
-
-# install vivaldi on 8 aug 2022
-# the shortcut key is Super+F5
-# call in shortcut vivaldi-stable
+printf "[SUCCESS] All selected browsing environments deployed successfully.\n"

@@ -1,5 +1,11 @@
 #!/bin/bash
+# =============================================================================
+#  ISO Image Flasher & USB Bootable Media Writer Deployment
+# =============================================================================
+set -e
 
-# sudo pacman -S --needed --noconfirm imagewriter
+printf "\n[*] Fetching Imagewriter Engine from Arch User Repository...\n"
+# imagewriter: ทูลเขียนไฟล์ .iso ลงแฟลชไดรฟ์แบบ GUI ใช้งานง่ายมาก
+yay -S --needed --noconfirm imagewriter
 
-yay -Syu imagewriter --needed --noconfirm
+printf "[SUCCESS] ISO Image flashing utilities have been integrated.\n"

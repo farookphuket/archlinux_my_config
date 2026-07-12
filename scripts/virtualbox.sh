@@ -1,9 +1,14 @@
 #!/bin/bash
+# =============================================================================
+#  Oracle VirtualBox Subsystem Configuration
+# =============================================================================
+set -e
 
-# install virtualbox
-# 13 Nov. 2025 need to install linux-headers or cannot run `sudo /sbin/vboxconfig` otherwise
-sudo pacman -S virtualbox linux-headers --needed --noconfirm
+printf "\n[*] Syncing VirtualBox Hypervisor and Active Linux Headers...\n"
+sudo pacman -S --needed --noconfirm virtualbox linux-headers
 
-sleep 5s
+printf "\n[*] Registering VirtualBox Kernel Driver Modules...\n"
+# สั่งลงทะเบียนเพื่อให้ระบบทำการโหลดโมดูล 'vboxdrv' อัตโนมัติในระดับแกนกลาง
+sudo systemctl enable --now vboxdrv.service || true
 
-modprobe vboxdrv
+printf "[SUCCESS] VirtualBox Virtualization environment configured.\n"

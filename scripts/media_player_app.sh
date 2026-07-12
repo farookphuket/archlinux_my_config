@@ -1,15 +1,22 @@
 #!/bin/bash
+# =============================================================================
+#  Core Media Player and Frameworks Stack
+# =============================================================================
+set -e
 
-# delete _cmus other whise install error
-ex_cmus=/usr/share/zsh/site-functions/_cmus
-
-if [ -f "$ex_cmus" ]; then
-  sudo rm -rf /usr/share/zsh/site-functions/_cmus
+printf "\n[*] Purging Zsh auto-completion conflicts for cmus...\n"
+if [ -f "/usr/share/zsh/site-functions/_cmus" ]; then
+    sudo rm -rf "/usr/share/zsh/site-functions/_cmus"
 fi
 
-sudo pacman -Syu --needed --noconfirm cmus audacious clementine audacity vlc-plugin-ffmpeg
+printf "\n[*] Deploying Core Audio & Video Players Stack...\n"
+# clementine: โปรแกรมฟังเพลงจัดการคลังเพลงขนาดใหญ่
+# cmus: โปรแกรมฟังเพลงระดับ Lightweight บน Terminal
+# vlc & vlc-plugin-ffmpeg: ตัวเล่นวิดีโอสากลและปลั๊กอินถอดรหัสความละเอียดสูง
+sudo pacman -S --needed --noconfirm \
+    clementine \
+    cmus \
+    vlc \
+    vlc-plugin-ffmpeg
 
-# install vlc
-pamac install vlc
-
-# update ffmpeg plugin for vlc 16 Aug 2025
+printf "[SUCCESS] Core Media Playback engines integrated flawlessly.\n"

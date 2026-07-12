@@ -1,6 +1,10 @@
 #!/bin/bash
+# =============================================================================
+#  LibreOffice Office Productivity Workspace Deployment
+# =============================================================================
+set -e
 
-# last setup using this method on 17 Oct 2021
-#yay -S libreoffice-still
+printf "\n[*] Syncing LibreOffice (Still Stable Version) Core Binary Stack...\n"
+sudo pacman -S --needed --noconfirm libreoffice-still
 
-sudo pacman -Sy libreoffice-still --needed --noconfirm
+printf "[SUCCESS] LibreOffice productivity suite deployment complete.\n"

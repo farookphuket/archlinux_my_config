@@ -1,30 +1,29 @@
-#!/bin/bash 
+#!/bin/bash
+set -e
 
-
-ex_snp=/usr/share/zsh/site-functions/_snap
-if [ -f "$ex_snp" ] ;
-then
-    sudo rm -rf $ex_snp 
-    echo "deleted file"
+printf "\n[*] Resolving Zsh function layout overlays for Snapd...\n"
+EX_SNP="/usr/share/zsh/site-functions/_snap"
+if [ -f "$EX_SNP" ]; then
+    sudo rm -rf "$EX_SNP"
 fi
 
-pushd ~/ 
-git clone https://aur.archlinux.org/snapd.git 
-cd snapd 
-makepkg -si
+printf "\n[*] Fetching and compiling Snap Engine framework...\n"
+cd "$HOME"
+
+# Flush old staging directory paths
+[ -d "$HOME/snapd" ] && rm -rf "$HOME/snapd"
+
+git clone https://aur.archlinux.org/snapd.git "$HOME/snapd"
+cd "$HOME/snapd"
+makepkg -si --noconfirm --needed
+
+printf "\n[*] Registering Core Sockets with the Linux Init System...\n"
 sudo systemctl enable --now snapd.socket
 
-# make a symbolic link 
-sudo ln -s /var/lib/snapd/snap /snap 
+printf "\n[*] Binding symbolic links for classic app deployment compatibilities...\n"
+if [ ! -L /snap ]; then
+    sudo ln -s /var/lib/snapd/snap /snap
+fi
 
-popd 
-
-
-yay -Syu
-
-# pamac not has install yet at this point 
-# last edit 17 Nov 2021
-# pamac update
-
- 
-sudo pacman -Syyu 
+cd "$HOME"
+printf "[SUCCESS] Snap Core Engine deployed successfully.\n"

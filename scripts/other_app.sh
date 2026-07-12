@@ -1,27 +1,15 @@
 #!/bin/bash
+# =============================================================================
+#  Productivity Utilities & PostgreSQL Database Runtime Stack
+# =============================================================================
+set -e
 
-sudo pacman -Syu --needed --noconfirm inkscape
+printf "\n[*] Deploying Creative Tools and Office Assistants...\n"
+# inkscape: โปรแกรมวาดภาพเวกเตอร์ระดับโปร
+# thunderbird: โปรแกรมจัดการอีเมลที่พี่ผูก Tray Icon ไว้ใน autostart.sh
+# kmag: ทูลขยายหน้าจอสำหรับช่วยตรวจเช็กพิกเซล UI
+sudo pacman -S --needed --noconfirm inkscape thunderbird kmag
 
-## to prevent vlc cannot play .h264 file should install vlc-plugins-all
-## last update 12 Nov. 2025
-sudo pacman -Syu --needed --noconfirm vlc vlc-plugins-all thunderbird
-
-# last added 23 Apr 2022
-sudo pacman -Syu --needed --noconfirm sushi nautilus-image-converter
-
-# fake background webcam and webcam program 25 Jul 2022
-#sudo yay -S fswebcam fake-background-webcam-git
-
-# screen zoom in 10 Feb 2022
-sudo pacman -Syu --needed --noconfirm kmag
-
-
-# install PostgreSQL on 28 June 2026
-sudo pacman -S postgresql
-
-sudo -u postgres initdb --locale en_US.UTF-8 -D '/var/lib/postgres/data'
-
-sudo systemctl start postgresql
-sudo systemctl enable postgresql
-
+printf "\n[*] Deploying Nautilus File Manager Extension Tools...\n"
+sudo pacman -S --needed --noconfirm sushi nautilus-image-converter
 

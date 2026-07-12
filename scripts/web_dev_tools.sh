@@ -1,26 +1,11 @@
+#!/bin/bash
+# =============================================================================
+#  Web Development API Platforms (Postman Container)
+# =============================================================================
+set -e
 
-#!/bin/bash 
+printf "\n[*] Fetching Postman API Development Client Suite via AUR...\n"
+# postman-bin: ตัวแอปพลิเคชัน Postman ตัวเต็มเวอร์ชันตรงสเปกเสถียร
+yay -S --needed --noconfirm postman-bin
 
-
-# to install the web development tools and environment
-
-## ============================================================================
-## =============== install postman ============================================
-# 
-
-mkdir -p ~/install_app
-# change dir to home dir 
-cd ~/install_app
-
-# clone the script 
-git clone https://aur.archlinux.org/postman-bin.git 
-
-cd postman-bin 
-
-makepkg -si 
-
-## ============================================================================
-
-
-
-
+printf "[SUCCESS] Postman API client workspace integrated.\n"
