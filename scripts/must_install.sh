@@ -4,6 +4,8 @@ set -e
 printf "\n[*] Deploying Core Utilities and Modern CLI replacements...\n"
 sudo pacman -S --needed --noconfirm eza bat
 
+
+
 printf "\n[*] Configuring Virtualization Layer & Docker Runtime Engines...\n"
 sudo pacman -S --needed --noconfirm docker docker-compose docker-buildx
 

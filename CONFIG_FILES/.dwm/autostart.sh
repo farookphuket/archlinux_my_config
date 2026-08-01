@@ -1,10 +1,12 @@
 #!/bin/bash
 
 function run() {
-	if ! pgrep $1; then
-		$@ &
-	fi
+  if ! pgrep -f "$1" > /dev/null; then
+    "$@" &
+  fi
 }
+
+
 
 run "pa-applet"
 

@@ -14,6 +14,12 @@
 
 # my last update 
 
+## 1 Aug 2026 
+
+> add+update `power manager` script.
+
+
+
 ## 13 Jul 2026 
 > i just find out that i am not good with lazygit! 
 
