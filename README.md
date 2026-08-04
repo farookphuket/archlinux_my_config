@@ -14,6 +14,39 @@
 
 # my last update 
 
+
+
+---
+
+## 4 Aug 2026 create file usb-revive.sh 
+> Fix USB keyboard + USB mouse not working after wake up
+> Target destination: /usr/lib/systemd/system-sleep/usb-revive.sh
+> Remember to give execution permission: sudo chmod +x /usr/lib/systemd/system-sleep/usb-revive.sh
+
+
+```
+#!/bin/sh
+case "$1" in
+  post)
+    # ให้เวลา Kernel / USB Hub ตั้งหลักเล็กน้อยหลังตื่นจาก Sleep
+    sleep 1
+    
+    # Reset บัส USB อย่างปลอดภัย
+    for f in /sys/bus/usb/devices/*/authorized; do
+      if [ -w "$f" ]; then
+        echo 0 > "$f" 2>/dev/null
+        sleep 0.2
+        echo 1 > "$f" 2>/dev/null
+      fi
+    done
+    ;;
+esac
+exit 0
+
+
+```
+
+
 ## 1 Aug 2026 
 
 > add+update `power manager` script.

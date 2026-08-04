@@ -1,3 +1,23 @@
+---
+## create file usb-revive.sh to /usr/lib/systemd/system-sleep/ 
+
+```
+#!/bin/sh
+case "$1" in
+  post)
+    # Force reset all USB ports to wake up USB devices after sleep
+    for f in /sys/bus/usb/devices/*/authorized; do
+      echo 0 > "$f" 2>/dev/null
+      echo 1 > "$f" 2>/dev/null
+    done
+    ;;
+esac
+exit 0
+
+```
+
+
+
 --- 
 
 ## 11 Jul 2026

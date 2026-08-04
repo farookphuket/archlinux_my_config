@@ -96,6 +96,14 @@ if [ -f "$TAR_DIR/psmouse.conf" ]; then
     sudo cp "$TAR_DIR/psmouse.conf" /etc/modprobe.d/
 fi
 
+# to fix the usb keyboard+usb mouse not working from sleep mode 3 Aug 2026
+# /usr/lib/systemd/system-sleep/usb-revive.sh
+if [ -f "$TAR_DIR/usb-revive.sh" ]; then
+    sudo cp "$TAR_DIR/usb-revive.sh" /usr/lib/systemd/system-sleep/usb-revive.sh
+    sudo chmod +x /usr/lib/systemd/system-sleep/usb-revive.sh
+fi
+
+
 # ==================== 6. SHELL ENVIRONMENT ENHANCEMENT ====================
 
 printf "\n[*] Deploying Custom Zsh Framework Stack...\n"
