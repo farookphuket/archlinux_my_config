@@ -16,6 +16,19 @@
 
 
 
+
+--- 
+### 5 Aug 2026 
+> to get nvim as an editor put 
+
+```
+
+export EDITOR="nvim"
+export VISUAL="nvim"
+export SUDO_EDITOR="nvim"
+
+```
+
 ---
 
 ## 4 Aug 2026 create file usb-revive.sh 

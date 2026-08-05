@@ -22,6 +22,13 @@ autoload -Uz history-beginning-search-menu
 zle -N history-beginning-search-menu
 bindkey '^X^X' history-beginning-search-menu
 
+
+export EDITOR="nvim"
+export VISUAL="nvim"
+export SUDO_EDITOR="nvim"
+
+
+
 # =============== Personal Custom Aliases
 alias la='ls -A     --color=auto'
 alias l='ls -CF     --color=auto'
