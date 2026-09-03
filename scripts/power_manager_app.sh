@@ -8,14 +8,22 @@ printf "\n[*] Deploying Power Management Tools ...\n"
 # -----------------------------------------------------------------------------
 # 1. Install & Configure TLP (System-level Power Management)
 # -----------------------------------------------------------------------------
-echo "[+] Installing TLP..."
-sudo pacman -S --needed --noconfirm tlp tlp-rdw
+# echo "[+] Installing TLP..."
+# sudo pacman -S --needed --noconfirm tlp tlp-rdw
 
-echo "[+] Configuring TLP Services..."
-sudo systemctl enable tlp.service
+# echo "[+] Configuring TLP Services..."
+# sudo systemctl enable tlp.service
 # Mask rfkill to avoid conflict with TLP's radio device switching
-sudo systemctl mask systemd-rfkill.service systemd-rfkill.socket
+# sudo systemctl mask systemd-rfkill.service systemd-rfkill.socket
 
+# TLP will be conflict with power-manager 
+#
+# =========== Remove TLP ======================
+#  My Personal Take
+
+#    "I personally prefer using xfce4-power-manager alone because it's easier to configure via GUI, 
+#    no need to mess with complex config files, and it's more stable in my experience."
+# =================================================
 
 # -----------------------------------------------------------------------------
 # 2. Install & Configure auto-cpufreq (CPU Governor Optimization)
